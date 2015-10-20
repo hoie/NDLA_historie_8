@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+	<meta http-equiv="Content-type" value="text/html; charset=UTF-8" />
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	
+	<!--ie 10 or lower -->
+	
+	<!--[if lte IE 10]> 
+		<link href="css/ie.css" rel="stylesheet" type="text/css">
+	<![endif]-->
+
+<title>Andre Verdenskrig - Tankekart</title>
+
+<script>
+	var isShowing = false;
+	var isShowingWhat;
+	var isShowingId;
+	function hideNodeNote(id) {
+		console.log("hideNodeNote "+id);
+		// isShowing = false;
+		document.getElementById(id).className = "node " + id;
+		document.getElementById("overlay").className = "";
+		NDLAHistoryMindMap.saveNote(id,document.getElementById(id+"n").value);
+		setTimeout(function(){ isShowing = false; }, 100);
+	}
+	function showNodeNote(id) {
+		console.log("showNodeNote "+id);
+
+		if (!isShowing) {
+			document.getElementById('export-wrapper').className="";
+			isShowing = true;
+			isShowingWhat = "node";
+			isShowingId =id;
+			document.getElementById(id).className = "node active " + id;
+			document.getElementById("overlay").className = "active";
+			var n = NDLAHistoryMindMap.loadNote(id);
+			if (n!==undefined && n!==null) {
+				document.getElementById(id+"n").value = NDLAHistoryMindMap.loadNote(id);
+			}	
+		}
+	}
+	function hideLinkNote(id) {
+		console.log("hideLinkNote "+id);
+
+		// isShowing = false;
+		document.getElementById(id).className = "link " + id;
+		if (id==="l4") {
+			document.getElementById(id).className = "link double-arrow " + id;
+		}
+		document.getElementById(id).parentNode.classList.remove("activePlaceholder");
+		console.log('removed class');
+		document.getElementById("overlay").className = "";
+		NDLAHistoryMindMap.saveNote(id,document.getElementById(id+"n").value);
+		setTimeout(function(){ isShowing = false; }, 100);
+	}
+	function showLinkNote(id) {
+		console.log("showLinkNote "+id);
+
+		if (!isShowing) {
+			document.getElementById('export-wrapper').className='';
+			isShowing = true;
+			isShowingWhat = "link";
+			isShowingId =id;
+			document.getElementById(id).parentNode.className += ' activePlaceholder';
+			console.log('added class');
+			document.getElementById(id).className = "link active " + id;
+			document.getElementById("overlay").className = "active";
+			var n = NDLAHistoryMindMap.loadNote(id);
+			if (n!==undefined && n!==null) {
+				document.getElementById(id+"n").value = NDLAHistoryMindMap.loadNote(id);
+			}
+		}	
+	}
+	function clickOverlay() {
+		if (isShowing) {
+			if (isShowingWhat==="node") {
+				hideNodeNote(isShowingId);
+			} else {
+				hideLinkNote(isShowingId);
+			}
+		}
+	}
+</script>
+</head>
+
+<body>
+
+<div id="export-wrapper" class="">
+	<button onclick="document.getElementById('export-wrapper').className='';">&larr; Tilbake</button> <button onclick="window.print();">Skriv ut</button>
+	<div id="export-container" class="container"></div>
+</div>
+<div id="help-wrapper" class="">
+	<button onclick="document.getElementById('help-wrapper').className='';">&larr; Tilbake</button>
+	<div id="help-container" class="container"></div>
+</div>
+<header id="header" class="grid_full">
+	<h1>Andre verdenskrig</h1>
+</header>
+<section id="container" class="container grid_full">
+	<div class="n1 node nodePlaceholder">
+		<div id='l1' class='link l1'>
+			<div class="link-note">
+				<h2 id='l1title'>Oppgjøret etter 1VK &rarr; Tysk ekspansjon</h2>
+				<button class="edit" onclick="showLinkNote('l1');">&#9998;</button>
+				<h3 id='l1subtitle'></h3>
+				<div id='l1url' class="node-url">url</div>
+				<textarea placeholder="Skriv ditt notat her..." id='l1n'></textarea>
+				<button class="close" onclick="hideLinkNote('l1');">&#215;</button>
+			</div>
+		</div>
+		<div id='l2' class='link l2'>
+			<div class="link-note">
+				<h2 id='l2title'>Oppgjøret etter 1VK &rarr; Ekstreme ideologier</h2>
+				<div id='l2url' class="node-url">url</div>
+				<h3 id='l2subtitle'></h3>
+				<button class="edit" onclick="showLinkNote('l2');">&#9998;</button>
+				<textarea placeholder="Skriv ditt notat her..." id='l2n'></textarea>
+				<button class="close" onclick="hideLinkNote('l2');">&#215;</button>
+			</div>
+		</div>
+		<div id='l3' class='link l3'>
+			<div class="link-note">
+				<h2 id='l3title'>Oppgjøret etter 1VK &rarr; Økonomisk krise</h2>
+				<h3 id='l3subtitle'></h3>
+				<div id='l3url' class="node-url">url</div>
+				<button class="edit" onclick="showLinkNote('l3');">&#9998;</button>
+				<textarea placeholder="Skriv ditt notat her..." id='l3n'></textarea>
+				<button class="close" onclick="hideLinkNote('l3');">&#215;</button>
+			</div>
+		</div>
+	</div>
+	<div id='n1' class='node n1' onclick="showNodeNote('n1');" style="background-image: url(img/szeba91a_The_Granger_Collection_NTBscanpix.jpg);">
+		<h2 id='n1title'>Oppgjøret etter 1VK</h2>
+		<h3 id='n1subtitle'>Oppgjøret etter 1VK</h3>
+		<div id='n1url' class="node-url">url</div>
+		<button class="edit" onclick="showNodeNote('n1');">&#x2713;</button>
+		<textarea placeholder="Skriv ditt notat her..." id='n1n'></textarea>
+		<button class="close" onclick="hideNodeNote('n1');">&#215;</button>
+	</div>
+	
+	<div class="n2 node nodePlaceholder"></div>
+	<div id='n2' class='node n2' onclick="showNodeNote('n2');" style="background-image: url(img/sz873bf8_NTBscanpix_crop.jpg);">
+		<h2 id='n2title'>Appeasment</h2>
+		<h3 id='n2subtitle'>Appeasment</h3>
+		<div id='n2url' class="nodurl">url</div>
+		<button class="edit" onclick="showNodeNote('n2');">&#9998;</button>
+		<textarea placeholder="Skriv ditt notat her..." id='n2n'></textarea>
+		<button class="close" onclick="hideNodeNote('n2');">&#215;</button>
+	</div>
+	
+	<div class="n3 node nodePlaceholder">
+		<div id='l4' class='link l4 double-arrow'>
+			<div class="link-note">
+				<h2 id='l4title'>Tysk ekspansjon &harr; Appeasment</h2>
+				<h3 id='l4subtitle'></h3>
+				<div id='l4url' class="node-url">url</div>
+				<button class="edit" onclick="showLinkNote('l4');">&#9998;</button>
+				<textarea placeholder="Skriv ditt notat her..." id='l4n'></textarea>
+				<button class="close" onclick="hideLinkNote('l4');">&#215;</button>
+			</div>
+		</div>
+		<div id='l5' class='link l5'>
+			<div class="link-note">
+				<h2 id='l5title'>Tysk ekspansjon &rarr; Andre verdenskrig</h2>
+				<h3 id='l5subtitle'></h3>
+				<div id='l5url' class="node-url">url</div>
+				<button class="edit" onclick="showLinkNote('l5');">&#9998;</button>
+				<textarea placeholder="Skriv ditt notat her..." id='l5n'></textarea>
+				<button class="close" onclick="hideLinkNote('l5');">&#215;</button>
+			</div>
+		</div>
+	</div>
+	<div id='n3' class='node n3' onclick="showNodeNote('n3');" style="background-image: url(img/szf7d74c_Berliner_VerlagArchiv_DPA_NTBscanpix.jpg);">
+		<h2 id='n3title'>Tysk ekspansjon</h2>
+		<h3 id='n3subtitle'>Tysk ekspansjon</h3>
+		<div id='n3url'>url</div>
+		<button class="edit" onclick="showNodeNote('n3');">&#9998;</button>
+		<textarea placeholder="Skriv ditt notat her..." id='n3n'></textarea>
+		<button class="close" onclick="hideNodeNote('n3');">&#215;</button>
+	</div>
+
+	<div class="n4 node nodePlaceholder">
+		<div id='l6' class='link l6'>
+			<div class="link-note">	
+				<h2 id='l6title'>Ekstreme ideologier &rarr; Tysk ekspansjon</h2>
+				<h3 id='l6subtitle'></h3>
+				<div id='l6url' class="node-url">url</div>
+				<button class="edit" onclick="showLinkNote('l6');">&#9998;</button>
+				<textarea placeholder="Skriv ditt notat her..." id='l6n'></textarea>
+				<button class="close" onclick="hideLinkNote('l6');">&#215;</button>
+			</div>
+		</div>
+	</div>
+	<div id='n4' class='node n4' onclick="showNodeNote('n4');" style="background-image: url(img/szf7d1df_Berliner_Verlag_Archiv_NTBscanpix.jpg);">
+		<h2 id='n4title'>Ekstreme ideologier</h2>
+		<h3 id='n4subtitle'>Ekstreme ideologier</h3>
+		<div id='n4url'>url</div>
+		<button class="edit" onclick="showNodeNote('n4');">&#9998;</button>
+		<textarea placeholder="Skriv ditt notat her..." id='n4n'></textarea>
+		<button class="close" onclick="hideNodeNote('n4');">&#215;</button>
+	</div>
+
+	<div class="n5 node nodePlaceholder">
+		<div id='l7' class='link l7'>
+			<div class="link-note">
+				<h2 id='l7title'>Økonomisk krise &rarr; Ekstreme ideologier</h2>
+				<h3 id='l7subtitle'></h3>
+				<div id='l7url' class="node-url">url</div>
+				<button class="edit" onclick="showLinkNote('l7');">&#9998;</button>
+				<textarea placeholder="Skriv ditt notat her..." id='l7n'></textarea>
+				<button class="close" onclick="hideLinkNote('l7');">&#215;</button>
+			</div>
+		</div>
+	</div>
+	<div id='n5' class='node n5' onclick="showNodeNote('n5');" style="background-image: url(img/sz9012c0_Mary_Evans_Picture_NTBscanpix_crop.jpg);">
+		<h2 id='n5title'>Økonomisk krise</h2>
+		<h3 id='n5subtitle'>Økonomisk krise</h3>
+		<div id='n5url'>url</div>
+		<button class="edit"  onclick="showNodeNote('n5');">&#9998;</button>
+		<textarea placeholder="Skriv ditt notat her..." id='n5n'></textarea>
+		<button class="close"  onclick="hideNodeNote('n5');">&#215;</button>
+	</div>
+	
+	<div class="n6 node nodePlaceholder">
+	
+		<div id='l8' class='link l8'>
+			<div class="link-note">
+
+			<h2 id='l8title'>Andre verdenskrig - Den kalde krigen</h2>
+			<h3 id='l8subtitle'></h3>
+			<div id='l8url' class="node-url">url</div>
+			<button class="edit" onclick="showLinkNote('l8');">&#9998;</button>
+			<textarea placeholder="Skriv ditt notat her..." id='l8n'></textarea>
+			<button class="close" onclick="hideLinkNote('l8');">&#215;</button>
+			</div>
+		</div>
+		<div id='l9' class='link l9'>
+			<div class="link-note">
+
+			<h2 id='l9title'>Andre verdenskrig - Avkolonisering</h2>
+			<h3 id='l9subtitle'></h3>
+			<div id='l9url' class="node-url">url</div>
+			<button class="edit" onclick="showLinkNote('l9');">&#9998;</button>
+			<textarea placeholder="Skriv ditt notat her..." id='l9n'></textarea>
+			<button class="close" onclick="hideLinkNote('l9');">&#215;</button>
+			</div>
+		</div>
+	</div>
+	<div id='n6' class='node n6' onclick="showNodeNote('n6');" style="background-image: url(img/szc10a26_akg-images_NTBscanpix_crop.jpg);">
+		<h2 id='n6title'>Andre verdenskrig</h2>
+		<h3 id='n6subtitle'>Andre verdenskrig</h3>
+		<div id='n6url'>url</div>
+		<button class="edit" onclick="showNodeNote('n6');">&#9998;</button>		
+		<textarea placeholder="Skriv ditt notat her..." id='n6n'></textarea>
+		<button class="close" onclick="hideNodeNote('n6');">&#215;</button>
+	</div>
+
+	<div class="n7 node nodePlaceholder"></div>
+	<div id='n7' class='node n7' onclick="showNodeNote('n7');" style="background-image: url(img/ta02da64_Mimsy_Moeller_samfoto_NTBscanpix.jpg);">
+		<h2 id='n7title'>Den kalde krigen</h2>
+		<h3 id='n7subtitle'>Den kalde krigen</h3>
+		<div id='n7url'>url</div>
+		<button class="edit"  onclick="showNodeNote('n7');">&#9998;</button>
+		<textarea placeholder="Skriv ditt notat her..." id='n7n'></textarea>
+		<button class="close" onclick="hideNodeNote('n7');">&#215;</button>
+	</div>
+	
+	<div class="n8 node nodePlaceholder"></div>
+	<div id='n8' class='node n8' onclick="showNodeNote('n8');"  style="background-image: url(img/sz83e327_Topfoto_NTBscanpix_crop.jpg);">
+		<h2 id='n8title'>Avkolonisering</h2>
+		<h3 id='n8subtitle'>Avkolonisering</h3>
+		<div id='n8url'>url</div>
+		<button class="edit" onclick="showNodeNote('n8');">&#9998;</button>	
+		<textarea placeholder="Skriv ditt notat her..." id='n8n'></textarea>
+		<button class="close" onclick="hideNodeNote('n8');">&#215;</button>
+	</div>
+	
+	<div id="overlay" class="" onclick="clickOverlay();"></div>
+	<div class="settings"><button onclick="NDLAHistoryMindMap.showHelp();">Hjelp</button><button onclick="NDLAHistoryMindMap.exportText();">Eksportér notater</button><button onclick="NDLAHistoryMindMap.deleteNotes();">Slett alle notater</button>
+	</div>
+	<div id="progress-container"><span id="progress-bar" class="progress"><span class="progress_number" id='percent'>35%</span></span></div>
+</section>
+<script src="NDLAHistoryMindMap.js"></script>
+<script>
+	NDLAHistoryMindMap.init("2VK","ANDRE VERDENSKRIG");
+	var n1 = NDLAHistoryMindMap.createNode("Oppgjøret etter 1VK", "Foto: The Granger Collection / NTB Scanpix", "", "n1");
+	var n2 = NDLAHistoryMindMap.createNode("Appeasment", "Foto: NTB Scanpix","","n2");
+	var n3 = NDLAHistoryMindMap.createNode("Tysk ekspansjon", "Foto: Berliner Verlag Archiv DPA / NTB Scanpix","","n3");
+	var n4 = NDLAHistoryMindMap.createNode("Ekstreme ideologier", "Foto: Berliner Verlag Archiv / NTB Scanpix","","n4");
+	var n5 = NDLAHistoryMindMap.createNode("Økonomisk krise", "Foto: Mary Evans Picture / NTB Scanpix","","n5");
+	var n6 = NDLAHistoryMindMap.createNode("Andre verdenskrig", "Foto: AKG Images / NTB Scanpix","","n6");
+	var n7 = NDLAHistoryMindMap.createNode("Den kalde krigen", "Foto: Mimsy Møller samfoto / NTB Scanpix","","n7");
+	var n8 = NDLAHistoryMindMap.createNode("Avkolonisering", "Foto: Topfoto / NTB Scanpix","","n8");
+	var l1 = NDLAHistoryMindMap.createLink(n1,n3, false, "", "", "l1");
+	var l2 = NDLAHistoryMindMap.createLink(n1,n4, false, "", "", "l2");
+	var l3 = NDLAHistoryMindMap.createLink(n1,n5, false, "", "", "l3");
+	var l4 = NDLAHistoryMindMap.createLink(n3,n2, true, "", "", "l4");
+	var l5 = NDLAHistoryMindMap.createLink(n3,n6, false, "", "", "l5");
+	var l6 = NDLAHistoryMindMap.createLink(n4,n3, false, "", "", "l6");
+	var l7 = NDLAHistoryMindMap.createLink(n5,n4, false, "", "", "l7");
+	var l8 = NDLAHistoryMindMap.createLink(n6,n7, false, "", "", "l8");
+	var l9 = NDLAHistoryMindMap.createLink(n6,n8, false, "", "", "l9");
+	NDLAHistoryMindMap.updateNodes();
+	NDLAHistoryMindMap.updateLinks();
+	</script>
+</body>
+</html>
