@@ -33,16 +33,6 @@ var environment = options.environment || 'development';
 
 
 /**
- * COPY ASSETS TO DIST/ASSETS FOLDER
- */
-	gulp.task('copy-assets', function(){
-		gulp.src('assets/**/*')
-			.pipe(gulp.dest('dist/assets'))
-			.pipe(reload());
-	});
-
-
-/**
  * OPTIMIZE IMAGES TO DIST/IMG FOLDER
  */
 	gulp.task('optimize-images', function(){
@@ -57,10 +47,10 @@ var environment = options.environment || 'development';
  * COMPILE AND OPTIONALLY MINIFY SASS TO DIST/CSS FOLDER
  */
 	gulp.task('compile-sass', function(){
-		gulp.src('scss/styles.scss')
+		gulp.src('scss/style.scss')
 			.pipe(environment === 'development' ? sourcemaps.init() : gutil.noop())
 			.pipe(sass({
-				includePaths:['scss/vendor/', 'node_modules/bootstrap-sass/assets/stylesheets/']
+				// includePaths:['scss/vendor/', 'node_modules/bootstrap-sass/assets/stylesheets/']
 			})).on('error', handleError)
 			//// Sourcecomments i stedet for sourcemap. Fjern linjen med sourcemaps.init...
 			// .pipe(sass({
@@ -79,12 +69,12 @@ var environment = options.environment || 'development';
  */
 
 	gulp.task('scripts', function(){
-		return browserify('./scripts/main.js', {debug: environment === 'development'})
+		return browserify('./scripts/NDLAHistoryMindMap.js', {debug: environment === 'development'})
 			.bundle().on('error', handleError)
-			.pipe(source('bundle.js'))
+			.pipe(source('NDLAHistoryMindMap.js'))
 			.pipe(environment === 'production' ? buffer() : gutil.noop())
 			.pipe(environment === 'production' ? uglify() : gutil.noop())
-			.pipe(gulp.dest('dist/scripts'))
+			.pipe(gulp.dest('dist'))
 			.pipe(reload());
 	});
 
@@ -114,7 +104,6 @@ var environment = options.environment || 'development';
  */
 	gulp.task('watch', function(){
 		gulp.watch('*.html', ['copy-files']);
-		gulp.watch('assets/**/*', ['copy-assets']);
 		gulp.watch('img/**/*[jpg,png]', ['optimize-images']);
 		gulp.watch('scss/**/*.scss', ['compile-sass']);
 		gulp.watch('scripts/main.js', ['scripts']);
