@@ -113,7 +113,7 @@ var environment = options.environment || 'development';
 /**
  * BUILD PROJECT
  */
-	gulp.task('build', ['copy-files', 'copy-assets', 'optimize-images', 'compile-sass', 'scripts']);
+	gulp.task('build', ['copy-files', 'optimize-images', 'compile-sass', 'scripts']);
 
 
 /**
