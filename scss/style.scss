@@ -24,7 +24,6 @@ h2 {
 	letter-spacing: 2px;
 	margin-bottom: 1em;
 	margin-top: 0;
-	-webkit-transition: all .5s ease-in-out;
 	transition: all .5s ease-in-out;
 }
 a {
@@ -68,14 +67,12 @@ button {
 	display: block;
 	opacity: 0;
 	pointer-events: none;
-	-webkit-transition: opacity 0.5s ease .5s;
 	transition: opacity 0.5s ease .5s;
 }
 	#overlay.active {
 		opacity: 1;
 		pointer-events: all;
 		z-index: 3;
-		-webkit-transition: opacity 0.5s ease 0;
 		transition: opacity 0.5s ease 0;
 	}
 
@@ -92,10 +89,8 @@ button {
 	text-align: center;
 	background-size: 100%;
 	background-size: cover;
-	-webkit-background-size: cover;
 	background-color: #fff;
 	background-position: center center;
-	-webkit-transition: all .5s ease-in-out;
 	transition: all .5s ease-in-out;
 	overflow: hidden;
 	cursor: pointer;
@@ -125,7 +120,6 @@ button {
 		left: 0;
 		right: 0;
 		bottom: 0;
-		-webkit-transition: all .5s ease-in-out;
 		transition: all .5s ease-in-out;
 	}
 	.node.active:before {
@@ -134,14 +128,12 @@ button {
 
 	.node.nodePlaceholder{
 		overflow: visible;
-		-webkit-transition: all .5s ease-in-out;
 		transition: all .5s ease-in-out;
 		z-index: 1;
 	}
 	.node.nodePlaceholder.activePlaceholder{
 		z-index: 4;
 		background: transparent;
-		-webkit-transition: all .0 ease-in-out;
 		transition: all .0 ease-in-out;
 	}
 
@@ -166,7 +158,6 @@ button {
 		height: 500px;
 		z-index: 999;
 		padding: 30px;
-		-webkit-transition: all .5s ease-in-out 0s;
 		transition: all .5s ease-in-out 0s;
 	}
 	.node h2 {
@@ -183,12 +174,10 @@ button {
 		margin-top: 0;
 		opacity: 0;
 		font-weight: 400;
-		-webkit-transition: opacity .3s ease-in-out 0;
 		transition: opacity .3s ease-in-out 0;
 	}
 	.node.active h3{
 		opacity: 1;
-		-webkit-transition: opacity .3s ease-in-out .5s;
 		transition: opacity .3s ease-in-out .5s;
 	}
 	
@@ -243,7 +232,6 @@ button {
 		border-radius: 0;
 		padding: 5px 10px;
 		color: #9AD5CF;
-		-webkit-transition: all .3s ease-in-out;
 		transition: all .3s ease-in-out;
 	}
 	.node:hover .edit {
@@ -271,7 +259,6 @@ button {
 		height: 0;
 		clear: both;
 
-		-webkit-transition: all 0s ease-in-out;
 		transition: all 0s ease-in-out;
 	}
 	.node .close {
@@ -282,13 +269,11 @@ button {
 		pointer-events: none;
 		padding: 5px 12px;
 		border-radius: 0;
-		-webkit-transition: all 0s ease-in-out;
 		transition: all 0s ease-in-out;
 	}
 	.node.active .close {
 		opacity: 1;
 		pointer-events: all;
-		-webkit-transition: opacity .3s ease .5s;
 		transition: opacity .3s ease .5s;
 	}
 	.node.active .edit {
@@ -299,7 +284,6 @@ button {
 		height: 340px;
 		opacity: 1;
 		pointer-events: all;
-		-webkit-transition: all .3s ease-in-out .5s;
 		transition: all .3s ease-in-out .5s;
 		
 	}
@@ -443,7 +427,6 @@ button {
 		margin-top: -15px;
 		height: 30px;
 		width: 30px;
-		-webkit-transition: all .5s ease-in-out;
 		transition: all .5s ease-in-out;
 	}
 	.link.active {
@@ -498,7 +481,6 @@ button {
 	}
 	.link h2 {
 		opacity: 0;
-		-webkit-transition: opacity .3s ease;
 		transition: opacity .3s ease;
 	}
 	.link.active h2 {
@@ -513,12 +495,10 @@ button {
 		margin-top: 0;
 		opacity: 0;
 		font-weight: 400;
-		-webkit-transition: opacity .3s ease-in-out 0;
 		transition: opacity .3s ease-in-out 0;
 	}
 	.link.active h3{
 		opacity: 1;
-		-webkit-transition: opacity .3s ease-in-out .5s;
 		transition: opacity .3s ease-in-out .5s;
 	}
 	
@@ -528,7 +508,6 @@ button {
 		pointer-events: none;
 		height: 0;
 		clear: both;
-		-webkit-transition: all 0s ease-in-out;
 		transition: all 0s ease-in-out;
 	}
 	.link .close {
@@ -539,13 +518,11 @@ button {
 		pointer-events: none;
 		visibility: hidden;
 		padding: 5px 12px;
-		-webkit-transition: all 0s ease-in-out;
 		transition: all 0s ease-in-out;
 	}
 	.link.active .close {
 		opacity: 1;
 		pointer-events: all;
-		-webkit-transition: opacity .3s ease .5s;
 		transition: opacity .3s ease .5s;
 		visibility: visible;
 	}
@@ -553,7 +530,6 @@ button {
 		height: 340px;
 		opacity: 1;
 		pointer-events: all;
-		-webkit-transition: all .3s ease-in-out .5s;
 		transition: all .3s ease-in-out .5s;
 		
 	}
@@ -606,7 +582,6 @@ button {
 	opacity: 0;
 	background: #fff;
 	pointer-events: none;
-	-webkit-transition: all .3s ease-in-out;
 	transition: all .3s ease-in-out;
 }
 #export-wrapper.active,
@@ -626,23 +601,14 @@ button {
 }
 #export-container *{
 	user-select: none;	
-	-ms-user-select: none;
-	-webkit-user-select: none;
-	-moz-user-select: -moz-none;
 }
 #export-container h1{
 	margin-bottom: 50px;
 	user-select: text;	
-	-ms-user-select: text;
-	-webkit-user-select: text;
-	-moz-user-select: -moz-text;
 }
 #export-container h2{
 	margin-bottom: 0.5em;
 	user-select: text;	
-	-ms-user-select: text;
-	-webkit-user-select: text;
-	-moz-user-select: -moz-text;
 }
 #export-container h2 button {
 	margin-right: 20px;
@@ -650,9 +616,6 @@ button {
 #export-container p{
 	margin-left: 51px;
 	user-select: text;	
-	-ms-user-select: text;
-	-webkit-user-select: text;
-	-moz-user-select: -moz-text;
 }
 
 @media print {
