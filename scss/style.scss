@@ -2,6 +2,9 @@
 @import 'grid';
 @import 'reset';
 
+$primary-color: #9AD5CF;
+$link-color: #ccc;
+
 html {
 	height: 100%;
 }
@@ -27,16 +30,17 @@ h2 {
 	transition: all .5s ease-in-out;
 }
 a {
-	color: #9AD5CF;
+	color: $primary-color;
 }
 button {
 	outline: none;
 	cursor: pointer;
 	display: inline-block;
+	background-color: $link-color;
 }
 
 #header {
-	background: #9AD5CF;
+	background: $primary-color;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -86,6 +90,7 @@ button {
 	float: left;
 	color: #fff;
 	padding: 40px 10px 70px;
+	border: 3px solid $link-color;
 	text-align: center;
 	background-size: 100%;
 	background-size: cover;
@@ -231,20 +236,20 @@ button {
 		width: 30px;
 		border-radius: 0;
 		padding: 5px 10px;
-		color: #9AD5CF;
+		color: $primary-color;
 		transition: all .3s ease-in-out;
 	}
 	.node:hover .edit {
 		right: 0;
 	}
 	.node.hasNote .edit {
-		background: #9AD5CF;
+		background: $primary-color;
 		color: #fff;
 		right: 0;
 		text-indent: 0px;
 	}
 	.hasNote .edit {
-		background: #9AD5CF;
+		background: $primary-color;
 		color: #fff;
 		line-height: 22px;
 	}
@@ -551,7 +556,7 @@ button {
 	right: 0;
 	height: 10px;
 	border-radius: 10px 0 0 10px;
-	background: #9AD5CF;
+	background: $primary-color;
 	width: 75px;
 }
 .progress_number {
