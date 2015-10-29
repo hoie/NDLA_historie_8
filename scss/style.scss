@@ -3,7 +3,9 @@
 @import 'reset';
 
 $primary-color: #9AD5CF;
+$tint-color: rgb(0,0,100);
 $link-color: #ccc;
+$link-height: 4px;
 
 html {
 	height: 100%;
@@ -90,7 +92,6 @@ button {
 	float: left;
 	color: #fff;
 	padding: 40px 10px 70px;
-	border: 3px solid $link-color;
 	text-align: center;
 	background-size: 100%;
 	background-size: cover;
@@ -120,7 +121,9 @@ button {
 	.node:before {
 		content: '';
 		position: absolute;
-		background: rgba(0,0,0,0.4);
+		border: 3px solid $link-color;
+		background: $tint-color;
+		opacity: 0.4;
 		top: 0;
 		left: 0;
 		right: 0;
@@ -128,7 +131,8 @@ button {
 		transition: all .5s ease-in-out;
 	}
 	.node.active:before {
-		background: rgba(0,0,0,0.8);
+		background: $tint-color;
+		opacity: 0.8;
 	}
 
 	.node.nodePlaceholder{
