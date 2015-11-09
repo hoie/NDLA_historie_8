@@ -50,12 +50,12 @@ NDLAHistoryMindMap = (function () {
 				document.getElementById("l"+i).className = "link double-arrow l" + i;
 			}
 		}
-		updatePercent();
-		updateNodes();
-		updateLinks();
-} else {
-   console.log("Cancel");
-}
+			updatePercent();
+			updateNodes();
+			updateLinks();
+		} else {
+		   console.log("Cancel");
+		}
 		
 	}
 	function showHelp() {
