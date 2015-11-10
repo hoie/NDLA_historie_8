@@ -117,7 +117,8 @@ button {
 	transition: all .5s ease-in-out;
 	overflow: hidden;
 	cursor: pointer;
-	z-index: 2
+	z-index: 2;
+	filter: drop-shadow(0 4px 2px rgba(0, 0, 0, 0.5));
 }
 
 @media only screen and (min-width: 1250px) { 
@@ -125,7 +126,6 @@ button {
 		width: 17%;
 		padding-left: 30px;
 		padding-right: 30px;
-		filter: drop-shadow(0px 3px 2px rgba(0, 0, 0, 0.5));
 	}
 }
 @media only screen and (min-height: 1100px) { 
@@ -304,7 +304,7 @@ button {
 	background: $link-color;
 	color: #222;
 	z-index: 0;
-	filter: drop-shadow(0px 3px 2px rgba(0, 0, 0, 0.5));
+	// filter: drop-shadow(0px 3px 2px rgba(0, 0, 0, 0.5));
 }
 
 @media only screen and (min-width: 1200px) { 
