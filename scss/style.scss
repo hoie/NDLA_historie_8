@@ -2,9 +2,9 @@
 @import 'grid';
 @import 'reset';
 
-$primary-color: #9AD5CF;
-$tint-color: rgb(0,0,100);
-$link-color: #ccc;
+$primary-color: #aeb503;
+$tint-color: #6b6902;
+$link-color: #aeb503;
 $link-height: 20px;
 $link-arrowhead: $link-height;
 $link-arrow-offset: -$link-arrowhead / 2;
@@ -17,7 +17,7 @@ html {
 body {
 	position: relative;
 	background: #eee;
-	background-image: url('../img/w_nor_sp0b249f.png');
+	background-image: url('../img/szc10a26_akg-images_NTBscanpix_bg.jpg');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -316,7 +316,8 @@ button {
 .link-h {
 	height: $link-height;
 	width: 30%;
-	top: 45%;
+	margin-top: -$link-height / 2;
+	top: 50%;
 	left: 100%;	
 
 	&.left {
@@ -354,6 +355,7 @@ button {
 .link-v {
 	width: $link-height;
 	height: 30%;
+	margin-left: -$link-height / 2;
 	left: 50%;
 	top: -30%;
 	
@@ -395,14 +397,14 @@ button {
 	top: 44%;
 }
 .n1 .l1 {
-	top: 10%;
+	top: 15%;
 }
 .n1 .l2 {
 	top: 85%;		    
 }
 .n1 .l3 {
 	
-	left: 80%;
+	left: 85%;
 	height: 100%;
 }
 
@@ -438,7 +440,7 @@ button {
 
 }
 .n6 .l8 {
-	top: 10%;		    
+	top: 15%;		    
 }
 .n6 .l9 {
 
