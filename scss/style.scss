@@ -3,6 +3,7 @@
 @import 'reset';
 
 $primary-color: #aeb503;
+$secondary-color: #756D00;
 $tint-color: #6b6902;
 $link-color: #aeb503;
 $link-height: 20px;
@@ -80,16 +81,17 @@ button {
 	bottom: 0;
 	height: 100vh;
 	width: 100vw;
-	background: #222;
-	background: rgba(0,0,0,0.8);
-	background: rgba(155,215,210,0.95);
+	// background: #222;
+	// background: rgba(0,0,0,0.8);
+	// background: rgba(115,106,0,0.9);
+	background: $secondary-color;
 	display: block;
 	opacity: 0;
 	pointer-events: none;
 	transition: opacity 0.5s ease .5s;
 	
 	&.active {
-		opacity: 1;
+		opacity: 0.9;
 		pointer-events: all;
 		z-index: 3;
 		transition: opacity 0.5s ease 0;
