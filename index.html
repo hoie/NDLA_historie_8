@@ -18,6 +18,7 @@
 	var isShowing = false;
 	var isShowingWhat;
 	var isShowingId;
+	var linkClasses;
 	function hideNodeNote(id) {
 		console.log("hideNodeNote "+id);
 		// isShowing = false;
@@ -46,10 +47,11 @@
 		console.log("hideLinkNote "+id);
 
 		// isShowing = false;
-		document.getElementById(id).className = "link " + id;
-		if (id==="l4") {
-			document.getElementById(id).className = "link double-arrow " + id;
-		}
+		// document.getElementById(id).className = "link " + id;
+		document.getElementById(id).className = linkClasses;
+		// if (id==="l4") {
+		// 	document.getElementById(id).className = "link double-arrow " + id;
+		// }
 		document.getElementById(id).parentNode.classList.remove("activePlaceholder");
 		console.log('removed class');
 		document.getElementById("overlay").className = "";
@@ -58,6 +60,8 @@
 	}
 	function showLinkNote(id) {
 		console.log("showLinkNote "+id);
+		linkClasses = document.getElementById(id).className;
+		console.log(linkClasses);
 
 		if (!isShowing) {
 			document.getElementById('export-wrapper').className='';
@@ -66,6 +70,8 @@
 			isShowingId =id;
 			document.getElementById(id).parentNode.className += ' activePlaceholder';
 			console.log('added class');
+			// document.getElementById(id).className = linkClasses + "active";
+			// document.getElementById(id).className = "link link-h right active " + id;
 			document.getElementById(id).className = "link active " + id;
 			document.getElementById("overlay").className = "active";
 			var n = NDLAHistoryMindMap.loadNote(id);
