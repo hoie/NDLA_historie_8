@@ -50,6 +50,7 @@ button {
 	outline: none;
 	cursor: pointer;
 	display: inline-block;
+	overflow: hidden;
 	background-color: $link-color;
 }
 
@@ -259,7 +260,8 @@ button {
 	line-height: 22px;
 }
 .hasNote .edit:before {
-	content: '\2714';
+	font-family: "FontAwesome";
+  	content: "\f036";
 	padding-right: 20px;
 }
 
