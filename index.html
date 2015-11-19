@@ -100,11 +100,11 @@
 <!-- BEHOLDERE FOR EKSPORTERBAR TEKST OG HJELPETEKST -->
 
 <div id="export-wrapper" class="">
-	<button onclick="document.getElementById('export-wrapper').className='';">&larr; Tilbake</button> <button onclick="window.print();">Skriv ut</button>
+	<button onclick="document.getElementById('export-wrapper').className='';"><i class="fa fa-arrow-left"></i> Tilbake</button> <button onclick="window.print();">Skriv ut</button>
 	<div id="export-container" class="container"></div>
 </div>
 <div id="help-wrapper" class="">
-	<button onclick="document.getElementById('help-wrapper').className='';">&larr; Tilbake</button>
+	<button onclick="document.getElementById('help-wrapper').className='';"><i class="fa fa-arrow-left"></i> Tilbake</button>
 	<div id="help-container" class="container"></div>
 </div>
 
@@ -131,34 +131,34 @@
 
 		<div id='l1' class='link l1 link-h right'>
 			<div class="link-note">
-				<h2 id='l1title'>Oppgjøret etter 1VK &rarr; Tysk ekspansjon</h2>
+				<h2 id='l1title'>Oppgjøret etter 1VK <i class="fa fa-long-arrow-right"></i> Tysk ekspansjon</h2>
 				<button class="edit" onclick="showLinkNote('l1');"><i class="fa fa-pencil"></i></button>
 				<h3 id='l1subtitle'></h3>
 				<div id='l1url' class="node-url">url</div>
 				<textarea placeholder="Skriv ditt notat her..." id='l1n'></textarea>
-				<button class="close" onclick="hideLinkNote('l1');">&#215;</button>
+				<button class="close" onclick="hideLinkNote('l1');"><i class="fa fa-times"></i></button>
 			</div>
 		</div>
 
 		<div id='l2' class='link l2 link-h right'>
 			<div class="link-note">
-				<h2 id='l2title'>Oppgjøret etter 1VK &rarr; Ekstreme ideologier</h2>
+				<h2 id='l2title'>Oppgjøret etter 1VK <i class="fa fa-long-arrow-right"></i> Ekstreme ideologier</h2>
 				<div id='l2url' class="node-url">url</div>
 				<h3 id='l2subtitle'></h3>
 				<button class="edit" onclick="showLinkNote('l2');"><i class="fa fa-pencil"></i></button>
 				<textarea placeholder="Skriv ditt notat her..." id='l2n'></textarea>
-				<button class="close" onclick="hideLinkNote('l2');">&#215;</button>
+				<button class="close" onclick="hideLinkNote('l2');"><i class="fa fa-times"></i></button>
 			</div>
 		</div>
 
 		<div id='l3' class='link l3 link-v down'>
 			<div class="link-note">
-				<h2 id='l3title'>Oppgjøret etter 1VK &rarr; Økonomisk krise</h2>
+				<h2 id='l3title'>Oppgjøret etter 1VK <i class="fa fa-long-arrow-right"></i> Økonomisk krise</h2>
 				<h3 id='l3subtitle'></h3>
 				<div id='l3url' class="node-url">url</div>
 				<button class="edit" onclick="showLinkNote('l3');"><i class="fa fa-pencil"></i></button>
 				<textarea placeholder="Skriv ditt notat her..." id='l3n'></textarea>
-				<button class="close" onclick="hideLinkNote('l3');">&#215;</button>
+				<button class="close" onclick="hideLinkNote('l3');"><i class="fa fa-times"></i></button>
 			</div>
 		</div>
 	</div>
@@ -169,7 +169,7 @@
 		<h3 id='n1subtitle'>Oppgjøret etter 1VK</h3>
 		<div id='n1url' class="node-url">url</div>
 		<textarea placeholder="Skriv ditt notat her..." id='n1n'></textarea>
-		<button class="close" onclick="hideNodeNote('n1');">&#215;</button>
+		<button class="close" onclick="hideNodeNote('n1');"><i class="fa fa-times"></i></button>
 	</div>
 
 <!-- NODE 2: APPEASMENT -->
@@ -182,7 +182,7 @@
 		<h3 id='n2subtitle'>Appeasment</h3>
 		<div id='n2url' class="nodurl">url</div>
 		<textarea placeholder="Skriv ditt notat her..." id='n2n'></textarea>
-		<button class="close" onclick="hideNodeNote('n2');">&#215;</button>
+		<button class="close" onclick="hideNodeNote('n2');"><i class="fa fa-times"></i></button>
 	</div>
 
 <!-- NODE 3: TYSK EKSPANSJON -->
@@ -191,23 +191,23 @@
 
 		<div id='l4' class='link l4 link-v double'>
 			<div class="link-note">
-				<h2 id='l4title'>Tysk ekspansjon &harr; Appeasment</h2>
+				<h2 id='l4title'>Tysk ekspansjon <i class="fa fa-arrows-h"></i> Appeasment</h2>
 				<h3 id='l4subtitle'></h3>
 				<div id='l4url' class="node-url">url</div>
 				<button class="edit" onclick="showLinkNote('l4');"><i class="fa fa-pencil"></i></button>
 				<textarea placeholder="Skriv ditt notat her..." id='l4n'></textarea>
-				<button class="close" onclick="hideLinkNote('l4');">&#215;</button>
+				<button class="close" onclick="hideLinkNote('l4');"><i class="fa fa-times"></i></button>
 			</div>
 		</div>
 
 		<div id='l5' class='link l5 link-h right  '>
 			<div class="link-note">
-				<h2 id='l5title'>Tysk ekspansjon &rarr; Andre verdenskrig</h2>
+				<h2 id='l5title'>Tysk ekspansjon <i class="fa fa-long-arrow-right"></i> Andre verdenskrig</h2>
 				<h3 id='l5subtitle'></h3>
 				<div id='l5url' class="node-url">url</div>
 				<button class="edit" onclick="showLinkNote('l5');"><i class="fa fa-pencil"></i></button>
 				<textarea placeholder="Skriv ditt notat her..." id='l5n'></textarea>
-				<button class="close" onclick="hideLinkNote('l5');">&#215;</button>
+				<button class="close" onclick="hideLinkNote('l5');"><i class="fa fa-times"></i></button>
 			</div>
 		</div>
 	</div>
@@ -218,7 +218,7 @@
 		<h3 id='n3subtitle'>Tysk ekspansjon</h3>
 		<div id='n3url'>url</div>
 		<textarea placeholder="Skriv ditt notat her..." id='n3n'></textarea>
-		<button class="close" onclick="hideNodeNote('n3');">&#215;</button>
+		<button class="close" onclick="hideNodeNote('n3');"><i class="fa fa-times"></i></button>
 	</div>
 
 <!-- NODE 4: EKSTREME IDEOLOGIER -->
@@ -227,12 +227,12 @@
 
 		<div id='l6' class='link l6 link-v up'>
 			<div class="link-note">	
-				<h2 id='l6title'>Ekstreme ideologier &rarr; Tysk ekspansjon</h2>
+				<h2 id='l6title'>Ekstreme ideologier <i class="fa fa-long-arrow-right"></i> Tysk ekspansjon</h2>
 				<h3 id='l6subtitle'></h3>
 				<div id='l6url' class="node-url">url</div>
 				<button class="edit" onclick="showLinkNote('l6');"><i class="fa fa-pencil"></i></button>
 				<textarea placeholder="Skriv ditt notat her..." id='l6n'></textarea>
-				<button class="close" onclick="hideLinkNote('l6');">&#215;</button>
+				<button class="close" onclick="hideLinkNote('l6');"><i class="fa fa-times"></i></button>
 			</div>
 		</div>
 	</div>
@@ -243,7 +243,7 @@
 		<h3 id='n4subtitle'>Ekstreme ideologier</h3>
 		<div id='n4url'>url</div>
 		<textarea placeholder="Skriv ditt notat her..." id='n4n'></textarea>
-		<button class="close" onclick="hideNodeNote('n4');">&#215;</button>
+		<button class="close" onclick="hideNodeNote('n4');"><i class="fa fa-times"></i></button>
 	</div>
 
 <!-- NODE 5: ØKONOMISK KRISE -->
@@ -252,12 +252,12 @@
 
 		<div id='l7' class='link l7 link-v up'>
 			<div class="link-note">
-				<h2 id='l7title'>Økonomisk krise &rarr; Ekstreme ideologier</h2>
+				<h2 id='l7title'>Økonomisk krise <i class="fa fa-long-arrow-right"></i> Ekstreme ideologier</h2>
 				<h3 id='l7subtitle'></h3>
 				<div id='l7url' class="node-url">url</div>
 				<button class="edit" onclick="showLinkNote('l7');"><i class="fa fa-pencil"></i></button>
 				<textarea placeholder="Skriv ditt notat her..." id='l7n'></textarea>
-				<button class="close" onclick="hideLinkNote('l7');">&#215;</button>
+				<button class="close" onclick="hideLinkNote('l7');"><i class="fa fa-times"></i></button>
 			</div>
 		</div>
 	</div>
@@ -268,7 +268,7 @@
 		<h3 id='n5subtitle'>Økonomisk krise</h3>
 		<div id='n5url'>url</div>
 		<textarea placeholder="Skriv ditt notat her..." id='n5n'></textarea>
-		<button class="close"  onclick="hideNodeNote('n5');">&#215;</button>
+		<button class="close"  onclick="hideNodeNote('n5');"><i class="fa fa-times"></i></button>
 	</div>
 
 <!-- NODE 6: ANDRE VERDENSKRIG  -->
@@ -282,7 +282,7 @@
 			<div id='l8url' class="node-url">url</div>
 			<button class="edit" onclick="showLinkNote('l8');"><i class="fa fa-pencil"></i></button>
 			<textarea placeholder="Skriv ditt notat her..." id='l8n'></textarea>
-			<button class="close" onclick="hideLinkNote('l8');">&#215;</button>
+			<button class="close" onclick="hideLinkNote('l8');"><i class="fa fa-times"></i></button>
 			</div>
 		</div>
 
@@ -293,7 +293,7 @@
 			<div id='l9url' class="node-url">url</div>
 			<button class="edit" onclick="showLinkNote('l9');"><i class="fa fa-pencil"></i></button>
 			<textarea placeholder="Skriv ditt notat her..." id='l9n'></textarea>
-			<button class="close" onclick="hideLinkNote('l9');">&#215;</button>
+			<button class="close" onclick="hideLinkNote('l9');"><i class="fa fa-times"></i></button>
 			</div>
 		</div>
 	</div>
@@ -304,7 +304,7 @@
 		<h3 id='n6subtitle'>Andre verdenskrig</h3>
 		<div id='n6url'>url</div>
 		<textarea placeholder="Skriv ditt notat her..." id='n6n'></textarea>
-		<button class="close" onclick="hideNodeNote('n6');">&#215;</button>
+		<button class="close" onclick="hideNodeNote('n6');"><i class="fa fa-times"></i></button>
 	</div>
 
 <!-- NODE 7: DEN KALDE KRIGEN -->
@@ -317,7 +317,7 @@
 		<h3 id='n7subtitle'>Den kalde krigen</h3>
 		<div id='n7url'>url</div>
 		<textarea placeholder="Skriv ditt notat her..." id='n7n'></textarea>
-		<button class="close" onclick="hideNodeNote('n7');">&#215;</button>
+		<button class="close" onclick="hideNodeNote('n7');"><i class="fa fa-times"></i></button>
 	</div>
 
 <!-- NODE 8: AVKOLONISERING -->
@@ -330,7 +330,7 @@
 		<h3 id='n8subtitle'>Avkolonisering</h3>
 		<div id='n8url'>url</div>
 		<textarea placeholder="Skriv ditt notat her..." id='n8n'></textarea>
-		<button class="close" onclick="hideNodeNote('n8');">&#215;</button>
+		<button class="close" onclick="hideNodeNote('n8');"><i class="fa fa-times"></i></button>
 	</div>
 
 <!-- SLUTT PÅ REDIGERBART INNHOLD *********************************************************************************************** -->
