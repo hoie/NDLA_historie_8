@@ -6,7 +6,7 @@ $primary-color: #aeb503;
 $secondary-color: #756D00;
 $tint-color: #6b6902;
 $link-color: #aeb503;
-$link-height: 20px;
+$link-height: 30px;
 $link-arrowhead: $link-height;
 $link-arrow-offset: -$link-arrowhead / 2;
 
@@ -110,7 +110,7 @@ button {
 	left: 0;
 	float: left;
 	color: #fff;
-	padding: 40px 10px 70px;
+	padding: 0 10px;
 	border: 3px solid $link-color;
 	text-align: center;
 	background-size: 100%;
@@ -194,6 +194,7 @@ button {
 .node h2 {
 	margin-bottom: 1em;
 	margin-top: 1em;
+	text-shadow: 0 3px 6px black;
 }
 .node.active h2 {
 	font-size: 20px;
@@ -237,14 +238,21 @@ button {
 	z-index: 1;
 }
 .node .edit {
-	position: relative;
-	height: 30px;
-	width: 30px;
+	position: absolute;
+	height: $link-height*1.1;
+	width: $link-height*1.1;
 	border-radius: 0;
-	padding: 5px 10px;
+	line-height: $link-height !important;
+	// padding: 5px 10px;
+	font-size: 1em !important;
+	margin-left: -$link-height/2;
+	margin-top: -$link-height/2;
+	left: 50%;
+	top: 50%;
 	// color: $primary-color;
 	transition: all .3s ease-in-out;
 }
+
 .node:hover .edit {
 	// right: 0;
 }
@@ -257,12 +265,15 @@ button {
 .hasNote .edit {
 	// background: $primary-color;
 	color: #fff;
-	line-height: 22px;
+	// line-height: $link-height;
 }
 .hasNote .edit:before {
 	font-family: "FontAwesome";
   	content: "\f036";
-	padding-right: 20px;
+	// padding-right: $link-height;
+}
+.hasNote .edit:hover {
+	color: #000;
 }
 
 .node textarea {
@@ -299,6 +310,19 @@ button {
 	transition: all .3s ease-in-out .5s;
 
 }
+
+
+.node button {
+	// background: rgba(0,0,0,0.5);
+	padding: 1px;
+	// text-shadow: 0 2px 3px black;
+}
+
+.node button:hover{
+	background: white;
+	text-shadow: none;
+}
+
 
 
 // PILER
@@ -507,14 +531,15 @@ button {
 }
 .link .edit {
 	position: absolute;
-	left: 50%;
-	margin-left: -10px;
-	top: 50%;
-	margin-top: -10px;
-	width: 20px;
-	height: 20px;
-	padding: 0;
-	line-height: 20px;
+	// left: 50%;
+	// margin-left: -$link-height/2;
+	// top: 50%;
+	// margin-top: -$link-height/2;
+	width: $link-height;
+	height: $link-height;
+	// padding: 5px 10px;
+	// padding: 0 3px;
+	// line-height: $link-height;
 	text-align: center;
 	visibility: visible;
 	overflow: hidden;
@@ -531,6 +556,7 @@ button {
 .link.active h2 {
 	opacity: 1;
 	font-size: 20px;
+	text-shadow: none;
 }
 .link h3 {
 	font-size: 14px;
@@ -572,7 +598,7 @@ button {
 	visibility: visible;
 }
 .link.active textarea {
-	height: 340px;
+	height: 310px;
 	opacity: 1;
 	pointer-events: all;
 	transition: all .3s ease-in-out .5s;
