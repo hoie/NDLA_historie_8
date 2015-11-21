@@ -16,13 +16,25 @@ html {
 }
 
 body {
+	background-blend-mode: multiply; 
 	position: relative;
-	background: #eee;
-	background-image: url('../img/szc10a26_akg-images_NTBscanpix_bg.jpg');
+	background-color: $secondary-color;
+	height: 100%;
+}
+
+body:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+	background-image: url('../img/szc10a26_akg-images_NTBscanpix.jpg');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	height: 100%;
+	filter: brightness(0.5) contrast(0.8) blur(1.3px);
+    mix-blend-mode: soft-light;
 }
 
 h1 {
