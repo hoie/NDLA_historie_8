@@ -16,13 +16,13 @@ html {
 }
 
 body {
-	background-blend-mode: multiply; 
 	position: relative;
-	background-color: $secondary-color;
+	// background-color: rgba(174,181,3,0.5);
+	background-color: rgba(115,107,0,0.8);
 	height: 100%;
 }
 
-body:before {
+html {
     content: '';
     position: absolute;
     top: 0;
@@ -33,8 +33,6 @@ body:before {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	filter: brightness(0.5) contrast(0.8) blur(1.3px);
-    mix-blend-mode: soft-light;
 }
 
 h1 {
@@ -155,8 +153,8 @@ button {
 	content: '';
 	position: absolute;
 	background: $tint-color;
-	opacity: 0.6;
-	mix-blend-mode: multiply;
+	opacity: 0.3;
+	mix-blend-mode: darken;
 	top: 0;
 	left: 0;
 	right: 0;
