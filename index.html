@@ -151,7 +151,7 @@
 			</div>
 		</div>
 
-		<div id='l3' class='link l3 link-v down'>
+		<div id='l3' class='link l3 link-h right'>
 			<div class="link-note">
 				<h2 id='l3title'>Oppgjøret etter 1VK <i class="fa fa-long-arrow-right"></i> Økonomisk krise</h2>
 				<h3 id='l3subtitle'></h3>
@@ -172,22 +172,77 @@
 		<button class="close" onclick="hideNodeNote('n1');"><i class="fa fa-times"></i></button>
 	</div>
 
-<!-- NODE 2: APPEASMENT -->
-	
-	<div class="n2 node nodePlaceholder"></div>
+<!-- NODE 2: EKSTREME IDEOLOGIER -->
 
-	<div id='n2' class='node n2' onclick="showNodeNote('n2');" style="background-image: url(img/sz873bf8_NTBscanpix_crop.jpg);">
+	<div class="n2 node nodePlaceholder">
+
+		<div id='l6' class='link l6 link-v up'>
+			<div class="link-note">	
+				<h2 id='l6title'>Ekstreme ideologier <i class="fa fa-long-arrow-right"></i> Tysk ekspansjon</h2>
+				<h3 id='l6subtitle'></h3>
+				<div id='l6url' class="node-url">url</div>
+				<button class="edit" onclick="showLinkNote('l6');"><i class="fa fa-pencil"></i></button>
+				<textarea placeholder="Skriv ditt notat her..." id='l6n'></textarea>
+				<button class="close" onclick="hideLinkNote('l6');"><i class="fa fa-times"></i></button>
+			</div>
+		</div>
+	</div>
+
+	<div id='n2' class='node n2' onclick="showNodeNote('n2');" style="background-image: url(img/szf7d1df_Berliner_Verlag_Archiv_NTBscanpix.jpg);">
 		<button class="edit" onclick="showNodeNote('n2');"><i class="fa fa-pencil"></i></button>
+		<h2 id='n4title'>Ekstreme ideologier</h2>
+		<h3 id='n4subtitle'>Ekstreme ideologier</h3>
+		<div id='n4url'>url</div>
+		<textarea placeholder="Skriv ditt notat her..." id='n4n'></textarea>
+		<button class="close" onclick="hideNodeNote('n2');"><i class="fa fa-times"></i></button>
+	</div>
+
+
+<!-- NODE 3: ØKONOMISK KRISE -->
+
+	<div class="n3 node nodePlaceholder">
+
+		<div id='l7' class='link l7 link-h right'>
+			<div class="link-note">
+				<h2 id='l7title'>Økonomisk krise <i class="fa fa-long-arrow-right"></i> Ekstreme ideologier</h2>
+				<h3 id='l7subtitle'></h3>
+				<div id='l7url' class="node-url">url</div>
+				<button class="edit" onclick="showLinkNote('l7');"><i class="fa fa-pencil"></i></button>
+				<textarea placeholder="Skriv ditt notat her..." id='l7n'></textarea>
+				<button class="close" onclick="hideLinkNote('l7');"><i class="fa fa-times"></i></button>
+			</div>
+		</div>
+	</div>
+
+	<div id='n3' class='node n3' onclick="showNodeNote('n3');" style="background-image: url(img/sz9012c0_Mary_Evans_Picture_NTBscanpix_crop.jpg);">
+		<button class="edit"  onclick="showNodeNote('n3');"><i class="fa fa-pencil"></i></button>
+		<h2 id='n5title'>Økonomisk krise</h2>
+		<h3 id='n5subtitle'>Økonomisk krise</h3>
+		<div id='n5url'>url</div>
+		<textarea placeholder="Skriv ditt notat her..." id='n5n'></textarea>
+		<button class="close"  onclick="hideNodeNote('n3');"><i class="fa fa-times"></i></button>
+		<button class="close" onclick="hideNodeNote('n3');"><i class="fa fa-times"></i></button>
+ 	</div>
+
+
+<!-- NODE 4: APPEASMENT -->
+	
+	<div class="n4 node nodePlaceholder"></div>
+
+	<div id='n4' class='node n4' onclick="showNodeNote('n4');" style="background-image: url(img/sz873bf8_NTBscanpix_crop.jpg);">
+		<button class="edit" onclick="showNodeNote('n4');"><i class="fa fa-pencil"></i></button>
 		<h2 id='n2title'>Appeasement</h2>
 		<h3 id='n2subtitle'>Appeasement</h3>
 		<div id='n2url' class="nodurl">url</div>
 		<textarea placeholder="Skriv ditt notat her..." id='n2n'></textarea>
-		<button class="close" onclick="hideNodeNote('n2');"><i class="fa fa-times"></i></button>
+		<button class="close" onclick="hideNodeNote('n4');"><i class="fa fa-times"></i></button>
 	</div>
 
-<!-- NODE 3: TYSK EKSPANSJON -->
+
+
+<!-- NODE 5: TYSK EKSPANSJON -->
 	
-	<div class="n3 node nodePlaceholder">
+	<div class="n5 node nodePlaceholder">
 
 		<div id='l4' class='link l4 link-v double'>
 			<div class="link-note">
@@ -212,63 +267,13 @@
 		</div>
 	</div>
 
-	<div id='n3' class='node n3' onclick="showNodeNote('n3');" style="background-image: url(img/szf7d74c_Berliner_VerlagArchiv_DPA_NTBscanpix.jpg);">
-		<button class="edit" onclick="showNodeNote('n3');"><i class="fa fa-pencil"></i></button>
+	<div id='n5' class='node n5' onclick="showNodeNote('n5');" style="background-image: url(img/szf7d74c_Berliner_VerlagArchiv_DPA_NTBscanpix.jpg);">
+		<button class="edit" onclick="showNodeNote('n5');"><i class="fa fa-pencil"></i></button>
 		<h2 id='n3title'>Tysk ekspansjon</h2>
 		<h3 id='n3subtitle'>Tysk ekspansjon</h3>
 		<div id='n3url'>url</div>
 		<textarea placeholder="Skriv ditt notat her..." id='n3n'></textarea>
-		<button class="close" onclick="hideNodeNote('n3');"><i class="fa fa-times"></i></button>
-	</div>
-
-<!-- NODE 4: EKSTREME IDEOLOGIER -->
-
-	<div class="n4 node nodePlaceholder">
-
-		<div id='l6' class='link l6 link-v up'>
-			<div class="link-note">	
-				<h2 id='l6title'>Ekstreme ideologier <i class="fa fa-long-arrow-right"></i> Tysk ekspansjon</h2>
-				<h3 id='l6subtitle'></h3>
-				<div id='l6url' class="node-url">url</div>
-				<button class="edit" onclick="showLinkNote('l6');"><i class="fa fa-pencil"></i></button>
-				<textarea placeholder="Skriv ditt notat her..." id='l6n'></textarea>
-				<button class="close" onclick="hideLinkNote('l6');"><i class="fa fa-times"></i></button>
-			</div>
-		</div>
-	</div>
-
-	<div id='n4' class='node n4' onclick="showNodeNote('n4');" style="background-image: url(img/szf7d1df_Berliner_Verlag_Archiv_NTBscanpix.jpg);">
-		<button class="edit" onclick="showNodeNote('n4');"><i class="fa fa-pencil"></i></button>
-		<h2 id='n4title'>Ekstreme ideologier</h2>
-		<h3 id='n4subtitle'>Ekstreme ideologier</h3>
-		<div id='n4url'>url</div>
-		<textarea placeholder="Skriv ditt notat her..." id='n4n'></textarea>
-		<button class="close" onclick="hideNodeNote('n4');"><i class="fa fa-times"></i></button>
-	</div>
-
-<!-- NODE 5: ØKONOMISK KRISE -->
-
-	<div class="n5 node nodePlaceholder">
-
-		<div id='l7' class='link l7 link-v up'>
-			<div class="link-note">
-				<h2 id='l7title'>Økonomisk krise <i class="fa fa-long-arrow-right"></i> Ekstreme ideologier</h2>
-				<h3 id='l7subtitle'></h3>
-				<div id='l7url' class="node-url">url</div>
-				<button class="edit" onclick="showLinkNote('l7');"><i class="fa fa-pencil"></i></button>
-				<textarea placeholder="Skriv ditt notat her..." id='l7n'></textarea>
-				<button class="close" onclick="hideLinkNote('l7');"><i class="fa fa-times"></i></button>
-			</div>
-		</div>
-	</div>
-
-	<div id='n5' class='node n5' onclick="showNodeNote('n5');" style="background-image: url(img/sz9012c0_Mary_Evans_Picture_NTBscanpix_crop.jpg);">
-		<button class="edit"  onclick="showNodeNote('n5');"><i class="fa fa-pencil"></i></button>
-		<h2 id='n5title'>Økonomisk krise</h2>
-		<h3 id='n5subtitle'>Økonomisk krise</h3>
-		<div id='n5url'>url</div>
-		<textarea placeholder="Skriv ditt notat her..." id='n5n'></textarea>
-		<button class="close"  onclick="hideNodeNote('n5');"><i class="fa fa-times"></i></button>
+		<button class="close" onclick="hideNodeNote('n5');"><i class="fa fa-times"></i></button>
 	</div>
 
 <!-- NODE 6: ANDRE VERDENSKRIG  -->
@@ -331,6 +336,32 @@
 		<div id='n8url'>url</div>
 		<textarea placeholder="Skriv ditt notat her..." id='n8n'></textarea>
 		<button class="close" onclick="hideNodeNote('n8');"><i class="fa fa-times"></i></button>
+	</div>
+
+<!-- NODE 9: FN -->
+	
+	<div class="n9 node nodePlaceholder"></div>
+
+	<div id='n9' class='node n9' onclick="showNodeNote('n9');"  style="background-image: url();">
+		<button class="edit" onclick="showNodeNote('n9');"><i class="fa fa-pencil"></i></button>	
+		<h2 id='n8title'>FN</h2>
+		<h3 id='n8subtitle'>FN</h3>
+		<div id='n8url'>url</div>
+		<textarea placeholder="Skriv ditt notat her..." id='n8n'></textarea>
+		<button class="close" onclick="hideNodeNote('n9');"><i class="fa fa-times"></i></button>
+	</div>
+
+<!-- NODE 10: ISRAEL / PALESTINA -->
+	
+	<div class="n10 node nodePlaceholder"></div>
+
+	<div id='n10' class='node n10' onclick="showNodeNote('n10');"  style="background-image: url();">
+		<button class="edit" onclick="showNodeNote('n10');"><i class="fa fa-pencil"></i></button>	
+		<h2 id='n8title'>Israel/Palestina</h2>
+		<h3 id='n8subtitle'>Israel/Palestina</h3>
+		<div id='n8url'>url</div>
+		<textarea placeholder="Skriv ditt notat her..." id='n8n'></textarea>
+		<button class="close" onclick="hideNodeNote('n10');"><i class="fa fa-times"></i></button>
 	</div>
 
 <!-- SLUTT PÅ REDIGERBART INNHOLD *********************************************************************************************** -->

@@ -1,5 +1,5 @@
 @import url('http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800');
-@import 'grid';
+//@import 'grid';
 @import 'reset';
 
 $primary-color: #aeb503;
@@ -112,8 +112,6 @@ button {
 
 
 .node {
-	width: 16%;
-	height: 14%;
 	display: block;
 	position: absolute;
 	top: 0;
@@ -431,28 +429,44 @@ button {
 
 
 
+$margin-width: 8%;
+$node-width: 12%;
+$gutter-width: 7%;
+$col-width: $node-width + $gutter-width;
+
+$col-1: $margin-width;
+$col-2: $col-1 + $col-width;
+$col-3: $col-2 + $col-width;
+$col-4: $col-3 + $col-width;
+$col-5: $col-4 + $col-width;
+
+.node {
+	width: 12%;
+	height: 14%;
+}
 
 .n1 {
-	left: 6%;
-	top: 44%;
-}
-.n1 .l1 {
-	top: 15%;
-}
-.n1 .l2 {
-	top: 85%;		    
-}
-.n1 .l3 {
-	left: 85%;
-	height: 100%;
+	left: $col-1;
+	top: 11%;
+	height: 80%;
+	
+	.l1 {
+		top: 9%;
+	}
+	.l2 {
+		top: 91%;		    
+	}
+	.l3 {
+		top: 50%;
+	}
 }
 
 .n2 {
-	left: 30%;
+	left: $col-2;
 	top: 11%
 }
 .n3 {
-	left: 30%;
+	left: $col-2;
 	top: 33%;
 }
 .n3 .l4 {
@@ -461,22 +475,23 @@ button {
 }
 
 .n4 {
-	left: 30%;
+	left: $col-2;
 	top: 55%;
 }
 .n4 .l6 {
 }
 .n5 {
-	left: 18%;
-	top: 77%;
+	left: $col-3;
+	top: 11%;
+	height: 80%;
 }
 .n5 .l7 {
 	left: 85%;
 }
 .n6 {
-	left: 54%;
-	top: 33%;
-
+	left: $col-4;
+	top: 11%;
+	height: 80%;
 }
 .n6 .l8 {
 	top: 15%;		    
@@ -486,12 +501,20 @@ button {
 	top: 85%;		    
 }
 .n7 {
-	left: 78%;
-	top: 22%;
+	left: $col-5;
+	top: 11%;
 }
 .n8 {
-	left: 78%;
-	top: 44%;
+	left: $col-5;
+	top: 33%;
+}
+.n9 {
+	left: $col-5;
+	top: 55%;
+}
+.n10 {
+	left: $col-5;
+	top: 77%;
 }
 
 
