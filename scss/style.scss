@@ -362,6 +362,11 @@ button {
 		left: -20%;
 	}
 
+	&.double {
+		left: 110%;
+		width: 20%;
+	}
+
 	&.left:before,
 	&.double:before,
 	&.right:after,
@@ -454,32 +459,32 @@ $col-5: $col-4 + $col-width;
 		top: 9%;
 	}
 	.l2 {
-		top: 91%;		    
+		top: 33%;		    
 	}
 	.l3 {
-		top: 50%;
+		top: 66%;
+	}
+	.l4 {
+		top: 90%;
+		width: 190%;
 	}
 }
 
 .n2 {
 	left: $col-2;
-	top: 11%
+	top: 11%;
 }
+
 .n3 {
 	left: $col-2;
 	top: 33%;
-}
-.n3 .l4 {
-	top: -43%;
-	height: 30%;
 }
 
 .n4 {
 	left: $col-2;
 	top: 55%;
 }
-.n4 .l6 {
-}
+
 .n5 {
 	left: $col-3;
 	top: 11%;
@@ -492,13 +497,20 @@ $col-5: $col-4 + $col-width;
 	left: $col-4;
 	top: 11%;
 	height: 80%;
-}
-.n6 .l8 {
-	top: 15%;		    
-}
-.n6 .l9 {
+	
+	.l9 {
+		top: 9%;
+	}
+	.l10 {
+		top: 33%;		    
+	}
+	.l11 {
+		top: 66%;
+	}
+	.l12 {
+		top: 90%;
+	}
 
-	top: 85%;		    
 }
 .n7 {
 	left: $col-5;
