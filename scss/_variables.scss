@@ -1,0 +1,21 @@
+$primary-color: #aeb503;
+$secondary-color: #756D00;
+$tint-color: #6b6902;
+$link-color: #aeb503;
+$link-height: 30px;
+$link-arrowhead: $link-height;
+$link-arrow-offset: -$link-arrowhead / 2;
+
+
+
+
+// 5 kolonner, 5 gutters (4 + 2x0,5)
+$node-width: 100%/7.5;
+$gutter-width: $node-width/2;
+$col-width: $node-width + $gutter-width;
+
+$col-1: $gutter-width/2;
+$col-2: $col-1 + $col-width;
+$col-3: $col-2 + $col-width;
+$col-4: $col-3 + $col-width;
+$col-5: $col-4 + $col-width;
