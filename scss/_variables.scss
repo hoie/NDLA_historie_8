@@ -2,10 +2,11 @@ $primary-color: #aeb503;
 $secondary-color: #756D00;
 $tint-color: #6b6902;
 $link-color: #aeb503;
-$link-height: 30px;
-$link-arrowhead: $link-height;
-$link-arrow-offset: -$link-arrowhead / 2;
-
+$link-size: 30px;
+$link-size-small: 20px;
+$link-arrow-offset: -$link-size / 2;
+$link-arrow-offset-small: -$link-size-small / 1.3;
+$small-screen: 1025px;
 
 
 

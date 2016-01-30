@@ -17,10 +17,17 @@
 // HORISONTALE PILER
 
 .link-h {
-	height: $link-height;
-	width: 60%;
+	height: $link-size;
+	@media (max-width: $small-screen) {
+		height: $link-size-small;
+	}
+	
+	width: 45%;
 	left: 100%;	
-	margin-top: -$link-height / 2;
+	margin-top: -$link-size / 2;
+	@media (max-width: $small-screen) {
+		height: $link-size-small / 2;
+	}	
 	top: 50%;
 
 	&.left {
@@ -29,7 +36,7 @@
 
 	&.double {
 		left: 120%;
-		width: 40%;
+		width: 26%;
 	}
 
 	&.left:before,
@@ -38,32 +45,47 @@
 	&.double:after {
 		content: "";
 		position: absolute;
-		top: $link-arrow-offset;
 		width: 0;
 		height: 0;
-		border-top: $link-arrowhead solid transparent;
-		border-bottom: $link-arrowhead solid transparent;
+		top: $link-arrow-offset;
+		border-top: $link-size solid transparent;
+		border-bottom: $link-size solid transparent;
+		@media (max-width: $small-screen) {
+			top: $link-arrow-offset-small;
+			border-top: $link-size-small solid transparent;
+			border-bottom: $link-size-small solid transparent;
+		}
 	}
 	
 	&.left:before,
 	&.double:before {
-		left: -$link-arrowhead;
-		border-right: $link-arrowhead solid $link-color;
+		left: -$link-size;
+		border-right: $link-size solid $link-color;
+		@media (max-width: $small-screen) {
+			left: -$link-size-small;
+			border-right: $link-size-small solid $link-color;
+		}
 	}
 
 	&.right:after,
 	&.double:after {
-		right: -$link-arrowhead;
-		border-left: $link-arrowhead solid $link-color;
+		right: -$link-size;
+		border-left: $link-size solid $link-color;
+		@media (max-width: $small-screen) {
+			right: -$link-size-small;
+			border-left: $link-size-small solid $link-color;
+		}
 	}
 }
+
+
 
 // VERTIKALE PILER
 
 .link-v {
-	width: $link-height;
+	width: $link-size;
 	height: 35%;
-	margin-left: -$link-height / 2;
+	margin-left: -$link-size / 2;
 	left: 50%;
 	top: -35%;
 	
@@ -80,20 +102,20 @@
 		left: $link-arrow-offset;
 		width: 0;
 		height: 0;
-		border-left: $link-arrowhead solid transparent;
-		border-right: $link-arrowhead solid transparent;
+		border-left: $link-size solid transparent;
+		border-right: $link-size solid transparent;
 	}
 
 	&.up:before,
 	&.double:before {
 		top: $link-arrow-offset;
-		border-bottom: $link-arrowhead solid $link-color;
+		border-bottom: $link-size solid $link-color;
 	}
 
 	&.down:after,
 	&.double:after {
 		bottom: $link-arrow-offset;
-		border-top: $link-arrowhead solid $link-color;
+		border-top: $link-size solid $link-color;
 	}
 }
 

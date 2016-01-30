@@ -157,6 +157,7 @@ button {
 }
 
 .node.nodePlaceholder{
+	padding: 0;
 	border: none;
 	overflow: visible;
 	transition: all .5s ease-in-out;
@@ -239,14 +240,14 @@ button {
 }
 .node .edit {
 	position: absolute;
-	height: $link-height*1.1;
-	width: $link-height*1.1;
+	height: $link-size*1.1;
+	width: $link-size*1.1;
 	border-radius: 0;
-	line-height: $link-height !important;
+	line-height: $link-size !important;
 	// padding: 5px 10px;
 	font-size: 1em !important;
-	margin-left: -$link-height/2;
-	margin-top: -$link-height/2;
+	margin-left: -$link-size/2;
+	margin-top: -$link-size/2;
 	left: 50%;
 	top: 50%;
 	// color: $primary-color;
@@ -265,12 +266,12 @@ button {
 .hasNote .edit {
 	// background: $primary-color;
 	color: #fff;
-	// line-height: $link-height;
+	// line-height: $link-size;
 }
 .hasNote .edit:before {
 	font-family: "FontAwesome";
   	content: "\f036";
-	// padding-right: $link-height;
+	// padding-right: $link-size;
 }
 .hasNote .edit:hover {
 	color: #000;
@@ -347,7 +348,7 @@ button {
 	}
 	.l4 {
 		top: 87%;
-		width: 190%;
+		width: 215%;
 	}
 }
 
@@ -444,27 +445,27 @@ button {
 // 	}
 // }
 
-.link.double-arrow:before {
-	content: '';
-	position: absolute;
-	height: 0;
-	width: 0;
-	border: 6px solid transparent;
-	border-top: 6px solid #222;
-	right: -3px;
-	bottom: -11px;
-}
+// .link.double-arrow:before {
+// 	content: '';
+// 	position: absolute;
+// 	height: 0;
+// 	width: 0;
+// 	border: 6px solid transparent;
+// 	border-top: 6px solid #222;
+// 	right: -3px;
+// 	bottom: -11px;
+// }
 .link .edit {
 	position: absolute;
 	// left: 50%;
-	// margin-left: -$link-height/2;
+	// margin-left: -$link-size/2;
 	// top: 50%;
-	// margin-top: -$link-height/2;
-	width: $link-height;
-	height: $link-height;
+	// margin-top: -$link-size/2;
+	width: $link-size;
+	height: $link-size;
 	// padding: 5px 10px;
 	// padding: 0 3px;
-	// line-height: $link-height;
+	// line-height: $link-size;
 	text-align: center;
 	visibility: visible;
 	overflow: hidden;
