@@ -22,10 +22,12 @@
 		height: $link-size-small;
 	}
 	
-	width: 45%;
+	width: $arrow-width;
+	margin-left: -$link-size;
 	left: 100%;	
 	margin-top: -$link-size / 2;
 	@media (max-width: $small-screen) {
+		margin-left: -$link-size-small;
 		height: $link-size-small / 2;
 	}	
 	top: 50%;

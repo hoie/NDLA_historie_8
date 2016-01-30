@@ -238,16 +238,19 @@ button {
 	position: relative;
 	z-index: 1;
 }
+
 .node .edit {
 	position: absolute;
-	height: $link-size*1.1;
-	width: $link-size*1.1;
-	border-radius: 0;
-	line-height: $link-size !important;
+	height: $editbutton-size;
+	width: $editbutton-size;
+	border-radius: $editbutton-size;
+	background-color: $accent-color;
 	// padding: 5px 10px;
-	font-size: 1em !important;
-	margin-left: -$link-size/2;
-	margin-top: -$link-size/2;
+	font-size: 1.3em !important;
+	line-height: $editbutton-size * 0.9 !important;
+	// margin-left: -$link-size/2;
+	margin-top: -$editbutton-size / 2;
+	margin-left: -$editbutton-size / 2;
 	left: 50%;
 	top: 50%;
 	// color: $primary-color;
@@ -273,6 +276,7 @@ button {
   	content: "\f036";
 	// padding-right: $link-size;
 }
+
 .hasNote .edit:hover {
 	color: #000;
 }
@@ -316,6 +320,7 @@ button {
 .node button {
 	// background: rgba(0,0,0,0.5);
 	padding: 1px;
+	max-width: none;
 	// text-shadow: 0 2px 3px black;
 }
 
@@ -328,7 +333,7 @@ button {
 
 
 .node {
-	width: 12%;
+	width: $node-width;
 	height: 14%;
 }
 
@@ -456,19 +461,19 @@ button {
 // 	bottom: -11px;
 // }
 .link .edit {
-	position: absolute;
+	// position: absolute;
 	// left: 50%;
 	// margin-left: -$link-size/2;
 	// top: 50%;
 	// margin-top: -$link-size/2;
-	width: $link-size;
-	height: $link-size;
+	// width: $link-size;
+	// height: $link-size;
 	// padding: 5px 10px;
 	// padding: 0 3px;
 	// line-height: $link-size;
-	text-align: center;
-	visibility: visible;
-	overflow: hidden;
+	// text-align: center;
+	// visibility: visible;
+	// overflow: hidden;
 }
 .link.active .edit {
 	opacity: 0;
