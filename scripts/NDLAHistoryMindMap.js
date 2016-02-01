@@ -6,6 +6,7 @@ NDLAHistoryMindMap = (function () {
    var percent = 0;
    var nodes = 0;
    var links = 0;
+   var linkClasses;
  
     function init(_storageId, _title) {
 	   historyNodes = [];
@@ -39,18 +40,18 @@ NDLAHistoryMindMap = (function () {
 	function deleteNotes() {
 		var r = confirm("Er du sikker på at du vil slette alle notatene dine tilhørende '"+title+"'?");
 		if (r == true) {
-    for (var i=1; i<=nodes; i++) {
-			saveNote("n"+i,"");
-			document.getElementById("n"+i).className = "node n" + i;
-		}
-		for (var i=1; i<=links; i++) {
-			saveNote("l"+i,"");
-			if (document.getElementById("l"+i).className.search("double-arrow")===-1) {
-				document.getElementById("l"+i).className = "link l" + i;
-			} else {
-				document.getElementById("l"+i).className = "link double-arrow l" + i;
+		    for (var i=1; i<=nodes; i++) {
+				saveNote("n"+i,"");
+				document.getElementById("n"+i).className = "node n" + i;
 			}
-		}
+			for (var i=1; i<=links; i++) {
+				saveNote("l"+i,"");
+				linkClasses = document.getElementById("l"+i).className;
+				if (! (linkClasses.search('hasNote')===-1)) {
+					linkClasses = linkClasses.replace('hasNote', '');
+				}
+				document.getElementById("l"+i).className = linkClasses;
+			}
 			updatePercent();
 			updateNodes();
 			updateLinks();
