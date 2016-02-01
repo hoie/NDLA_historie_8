@@ -1,20 +1,9 @@
 @import url('http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800');
-//@import 'grid';
-@import 'reset', '_variables', '_arrows';
+@import 'reset', '_variables', '_nodes', '_links';
 
 
 html {
 	height: 100%;
-}
-
-body {
-	position: relative;
-	// background-color: rgba(174,181,3,0.5);
-	background-color: rgba(115,107,0,0.8);
-	height: 100%;
-}
-
-html {
     content: '';
     position: absolute;
     top: 0;
@@ -25,6 +14,12 @@ html {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
+}
+
+body {
+	position: relative;
+	background-color: rgba(115,107,0,0.8);
+	height: 100%;
 }
 
 h1 {
@@ -66,6 +61,9 @@ button {
 	h1 {
 		margin: 0;
 		padding: 20px 30px;
+		@media (max-width: $small-screen) {
+			padding: 10px;
+		}
 		color: #000;
 		text-align: center;
 	}
@@ -103,248 +101,8 @@ button {
 
 
 
-.node {
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	float: left;
-	color: #fff;
-	padding: 0 10px;
-	border: 3px solid $link-color;
-	text-align: center;
-	background-size: 100%;
-	background-size: cover;
-	background-color: #fff;
-	background-position: center center;
-	transition: all .5s ease-in-out;
-	overflow: hidden;
-	cursor: pointer;
-	z-index: 2;
-	filter: drop-shadow(0 4px 2px rgba(0, 0, 0, 0.6));
-}
-
-// @media only screen and (min-width: 1250px) { 
-// 	.node {
-// 		width: 17%;
-// 		padding-left: 30px;
-// 		padding-right: 30px;
-// 	}
-// }
-// @media only screen and (min-height: 1100px) { 
-// 	.node {
-// 		height: 15%;
-// 		padding-top: 60px;
-// 		padding-bottom: 60px;
-// 	}
-// }
-
-.node:before {
-	content: '';
-	position: absolute;
-	background: $tint-color;
-	opacity: 0.3;
-	mix-blend-mode: darken;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	transition: all .5s ease-in-out;
-}
-.node.active:before {
-	background: $tint-color;
-	opacity: 0.8;
-}
-
-.node.nodePlaceholder{
-	padding: 0;
-	border: none;
-	overflow: visible;
-	transition: all .5s ease-in-out;
-	z-index: 1;
-}
-.node.nodePlaceholder.activePlaceholder{
-	z-index: 4;
-	background: transparent;
-	transition: all .0 ease-in-out;
-}
-
-.node.nodePlaceholder.activePlaceholder .link{
-	opacity: 0;
-}
-.node.nodePlaceholder.activePlaceholder .link.active{
-	opacity: 1;
-}
 
 
-.node.nodePlaceholder:before {
-	display: none;
-}
-.node.active {
-	position: fixed;
-	top: 50% !important;
-	left: 50% !important;
-	margin-left: -250px;
-	margin-top: -250px;
-	width: 500px;
-	height: 500px;
-	z-index: 999;
-	padding: 30px;
-	transition: all .5s ease-in-out 0s;
-}
-.node h2 {
-	margin-bottom: 1em;
-	margin-top: 1em;
-	text-shadow: 0 3px 6px black;
-}
-.node.active h2 {
-	font-size: 20px;
-}
-.node h3 {
-	font-size: 14px;
-	line-height: 1;
-	text-transform: inherit;
-	margin-bottom: 2em;
-	margin-top: 0;
-	opacity: 0;
-	font-weight: 400;
-	transition: opacity .3s ease-in-out 0;
-}
-.node.active h3{
-	opacity: 1;
-	transition: opacity .3s ease-in-out .5s;
-}
-
-.node-url {
-	opacity: 0;
-	display: none;
-}
-.node.active .node-url {
-	opacity: 1;
-	display: block;
-	position: absolute;
-	bottom: -30px;
-	right: 0;
-	left: 0;
-	color: #fff;
-	background: #000;
-	font-size: 12px;
-	line-height: 30px;
-	letter-spacing: 2px;
-	font-weight: 600;
-}
-
-.node * {
-	position: relative;
-	z-index: 1;
-}
-
-.node .edit {
-	position: absolute;
-	height: $editbutton-size;
-	width: $editbutton-size;
-	margin-top: -$editbutton-size / 2;
-	margin-left: -$editbutton-size / 2;
-	border-radius: $editbutton-size;
-	line-height: $editbutton-size * 0.9;
-	font-size: $editbutton-fontsize;
-		padding: 0;
-	@media (max-width: $small-screen) {
-		height: $editbutton-size-small;
-		width: $editbutton-size-small;
-		margin-top: -$editbutton-size-small / 2;
-		margin-left: -$editbutton-size-small / 2;
-		border-radius: $editbutton-size-small;
-		line-height: $editbutton-fontsize-small * 1.4 !important;
-		font-size: $editbutton-fontsize-small !important;
-	}
-	
-	background-color: $accent-color;
-	// padding: 5px 10px;
-	// margin-left: -$link-size/2;
-	left: 50%;
-	top: 50%;
-	// color: $primary-color;
-	transition: all .3s ease-in-out;
-}
-
-.node:hover .edit {
-	// right: 0;
-}
-.node.hasNote .edit {
-	// background: $primary-color;
-	color: #fff;
-	// right: 0;
-	text-indent: 0px;
-}
-.hasNote .edit {
-	// background: $primary-color;
-	color: #fff;
-	// line-height: $link-size;
-}
-.hasNote .edit:before {
-	font-family: "FontAwesome";
-  	content: "\f036";
-	// padding-right: $link-size;
-}
-
-.hasNote .edit:hover {
-	color: #000;
-}
-
-.node textarea {
-	opacity: 0;
-	pointer-events: none;
-	height: 0;
-	clear: both;
-
-	transition: all 0s ease-in-out;
-}
-.node .close {
-	opacity: 0;
-	position: absolute;
-	top: 0;
-	right: 0;
-	pointer-events: none;
-	padding: 5px 12px;
-	border-radius: 0;
-	transition: all 0s ease-in-out;
-}
-.node.active .close {
-	opacity: 1;
-	pointer-events: all;
-	transition: opacity .3s ease .5s;
-}
-.node.active .edit {
-	opacity: 0;
-	pointer-events: none;
-}
-.node.active textarea {
-	height: 340px;
-	opacity: 1;
-	pointer-events: all;
-	transition: all .3s ease-in-out .5s;
-
-}
-
-
-.node button {
-	// padding: 1px;
-	max-width: none;
-}
-
-.node button:hover{
-	background: white;
-	text-shadow: none;
-}
-
-
-
-
-.node {
-	width: $node-width;
-	height: 14%;
-}
 
 .n1 {
 	left: $col-1;
@@ -355,13 +113,13 @@ button {
 		top: 9%;
 	}
 	.l2 {
-		top: 35%;		    
+		top: 36%;		    
 	}
 	.l3 {
-		top: 61%;
+		top: 64%;
 	}
 	.l4 {
-		top: 87%;
+		top: 91%;
 		width: $link-width * 3.55;
 	}
 }
@@ -398,13 +156,13 @@ button {
 		top: 9%;
 	}
 	.l10 {
-		top: 35%;		    
+		top: 36%;		    
 	}
 	.l11 {
-		top: 61%;
+		top: 64%;
 	}
 	.l12 {
-		top: 87%;
+		top: 91%;
 	}
 
 }
@@ -426,115 +184,6 @@ button {
 }
 
 
-.link-note {
-	opacity: 1;
-	position: absolute;
-	top: 50% !important;
-	left: 50% !important;
-	margin-left: -15px;
-	margin-top: -15px;
-	height: 30px;
-	width: 30px;
-	transition: all .5s ease-in-out;
-}
-.link.active {
-	z-index: 2;
-}
-.link.active .link-note{
-	position: absolute;
-	top: 50% !important;
-	left: 50% !important;
-	margin-left: -175px;
-	margin-top: -225px;
-	padding: 30px;
-	width: 350px;
-	height: 450px;
-	z-index: 999;
-	background: #fff;
-}
-// @media only screen and (min-width: 1100px) { 
-// 	.link.active .link-note {
-// 		width: 500px;
-// 		margin-left: -250px;
-// 	}
-// }
-
-// .link.double-arrow:before {
-// 	content: '';
-// 	position: absolute;
-// 	height: 0;
-// 	width: 0;
-// 	border: 6px solid transparent;
-// 	border-top: 6px solid #222;
-// 	right: -3px;
-// 	bottom: -11px;
-// }
-.link-h.right .edit {
-	margin-left: ($link-size - $editbutton-size) / 2;
-	@media (max-width: $small-screen) {
-		margin-left: ($link-size-small - $editbutton-size-small) / 2;		
-	}
-}
-.link.active .edit {
-	opacity: 0;
-	pointer-events: none;
-	visibility: hidden;
-}
-.link h2 {
-	opacity: 0;
-	transition: opacity .3s ease;
-}
-.link.active h2 {
-	opacity: 1;
-	font-size: 20px;
-	text-shadow: none;
-}
-.link h3 {
-	font-size: 14px;
-	line-height: 1;
-	text-transform: inherit;
-	margin-bottom: 2em;
-	margin-top: 0;
-	opacity: 0;
-	font-weight: 400;
-	transition: opacity .3s ease-in-out 0;
-}
-.link.active h3{
-	opacity: 1;
-	transition: opacity .3s ease-in-out .5s;
-}
-
-
-.link textarea {
-	opacity: 0;
-	pointer-events: none;
-	height: 0;
-	clear: both;
-	transition: all 0s ease-in-out;
-}
-.link .close {
-	opacity: 0;
-	position: absolute;
-	top: 0;
-	right:0;
-	pointer-events: none;
-	visibility: hidden;
-	padding: 5px 12px;
-	transition: all 0s ease-in-out;
-}
-.link.active .close {
-	opacity: 1;
-	pointer-events: all;
-	transition: opacity .3s ease .5s;
-	visibility: visible;
-}
-.link.active textarea {
-	height: 310px;
-	opacity: 1;
-	pointer-events: all;
-	transition: all .3s ease-in-out .5s;
-
-}
 
 
 #progress-container {

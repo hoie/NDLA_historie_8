@@ -1,0 +1,230 @@
+.node * {
+	position: relative;
+	z-index: 1;
+}
+.node {
+	display: block;
+	position: absolute;
+	width: $node-width;
+	height: $node-height;
+	top: 0;
+	left: 0;
+	float: left;
+	color: #fff;
+	padding: 0 10px;
+	border: 3px solid $link-color;
+	text-align: center;
+	background-size: 100%;
+	background-size: cover;
+	background-color: #fff;
+	background-position: center center;
+	transition: all .5s ease-in-out;
+	overflow: hidden;
+	cursor: pointer;
+	z-index: 2;
+	filter: drop-shadow(0 4px 2px rgba(0, 0, 0, 0.6));
+}
+
+
+.node:before {
+	content: '';
+	position: absolute;
+	background: $tint-color;
+	opacity: 0.3;
+	mix-blend-mode: darken;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	transition: all .5s ease-in-out;
+}
+
+.node.active:before {
+	background: $tint-color;
+	opacity: 0.8;
+}
+
+.node.nodePlaceholder{
+	padding: 0;
+	border: none;
+	overflow: visible;
+	transition: all .5s ease-in-out;
+	z-index: 1;
+}
+
+.node.nodePlaceholder.activePlaceholder{
+	z-index: 4;
+	background: transparent;
+	transition: all .0 ease-in-out;
+}
+
+.node.nodePlaceholder.activePlaceholder .link{
+	opacity: 0;
+}
+
+.node.nodePlaceholder.activePlaceholder .link.active{
+	opacity: 1;
+}
+
+.node.nodePlaceholder:before {
+	display: none;
+}
+
+.node.active {
+	position: fixed;
+	top: 50% !important;
+	left: 50% !important;
+	margin-left: -250px;
+	margin-top: -250px;
+	width: 500px;
+	height: 500px;
+	z-index: 999;
+	padding: 30px;
+	transition: all .5s ease-in-out 0s;
+}
+
+// NODE EDIT (BUTTON)
+
+.node button {
+	// padding: 1px;
+	max-width: none;
+}
+
+.node button:hover{
+	background: white;
+	text-shadow: none;
+}
+
+.node .edit {
+	position: absolute;
+	height: $editbutton-size;
+	width: $editbutton-size;
+	margin-top: -$editbutton-size / 2;
+	margin-left: -$editbutton-size / 2;
+	border-radius: $editbutton-size;
+	line-height: $editbutton-size * 0.9;
+	font-size: $editbutton-fontsize;
+		padding: 0;
+	@media (max-width: $small-screen) {
+		height: $editbutton-size-small;
+		width: $editbutton-size-small;
+		margin-top: -$editbutton-size-small / 2;
+		margin-left: -$editbutton-size-small / 2;
+		border-radius: $editbutton-size-small;
+		line-height: $editbutton-fontsize-small * 1.4 !important;
+		font-size: $editbutton-fontsize-small !important;
+	}
+	background-color: $accent-color;
+	left: 50%;
+	top: 50%;
+	transition: all .3s ease-in-out;
+}
+
+.node:hover .edit {
+}
+
+.node.hasNote .edit {
+	color: #fff;
+	text-indent: 0px;
+}
+
+.hasNote .edit {
+	color: #fff;
+}
+
+.hasNote .edit:before {
+	font-family: "FontAwesome";
+  	content: "\f036";
+}
+
+.hasNote .edit:hover {
+	color: #000;
+}
+
+.node textarea {
+	opacity: 0;
+	pointer-events: none;
+	height: 0;
+	clear: both;
+	transition: all 0s ease-in-out;
+}
+
+.node .close {
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+	pointer-events: none;
+	padding: 5px 12px;
+	border-radius: 0;
+	transition: all 0s ease-in-out;
+}
+
+.node.active .close {
+	opacity: 1;
+	pointer-events: all;
+	transition: opacity .3s ease .5s;
+}
+
+.node.active .edit {
+	opacity: 0;
+	pointer-events: none;
+}
+
+.node.active textarea {
+	height: 340px;
+	opacity: 1;
+	pointer-events: all;
+	transition: all .3s ease-in-out .5s;
+}
+
+
+
+// NODE TYPOGRAPHY
+
+.node h2 {
+	margin-bottom: 1em;
+	margin-top: 1em;
+	text-shadow: 0 3px 6px black;
+}
+
+.node.active h2 {
+	font-size: 20px;
+}
+
+.node h3 {
+	font-size: 14px;
+	line-height: 1;
+	text-transform: inherit;
+	margin-bottom: 2em;
+	margin-top: 0;
+	opacity: 0;
+	font-weight: 400;
+	transition: opacity .3s ease-in-out 0;
+}
+
+.node.active h3{
+	opacity: 1;
+	transition: opacity .3s ease-in-out .5s;
+}
+
+.node-url {
+	opacity: 0;
+	display: none;
+}
+
+.node.active .node-url {
+	opacity: 1;
+	display: block;
+	position: absolute;
+	bottom: -30px;
+	right: 0;
+	left: 0;
+	color: #fff;
+	background: #000;
+	font-size: 12px;
+	line-height: 30px;
+	letter-spacing: 2px;
+	font-weight: 600;
+}
+

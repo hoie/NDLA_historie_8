@@ -3,12 +3,16 @@ $secondary-color: #756D00;
 $tint-color: #6b6902;
 $link-color: #aeb503;
 $accent-color: orange;
+
 $editbutton-size: 50px;
 $editbutton-size-small: 30px;
 $editbutton-fontsize: $editbutton-size * 0.6;
 $editbutton-fontsize-small: $editbutton-size-small * 0.6;
+
+$link-width: 65%;
 $link-size: 24px;
 $link-size-small: 12px;
+
 $small-screen: 1025px;
 
 
@@ -19,8 +23,8 @@ $small-screen: 1025px;
 $gutter-proportion: 0.6;
 $col-width: 100% / 5;  // 20%
 $node-width: $col-width * $gutter-proportion; // 20% * 0.6 = 12%
+$node-height: 14%;
 $gutter-width: $col-width - $node-width;  // 20% - 12% = 8%
-$link-width: 65%;
 
 $col-1: $gutter-width / 2;
 $col-2: $col-1 + $col-width;
