@@ -243,14 +243,25 @@ button {
 	position: absolute;
 	height: $editbutton-size;
 	width: $editbutton-size;
-	border-radius: $editbutton-size;
-	background-color: $accent-color;
-	// padding: 5px 10px;
-	font-size: 1.6em !important;
-	line-height: $editbutton-size * 0.9 !important;
-	// margin-left: -$link-size/2;
 	margin-top: -$editbutton-size / 2;
 	margin-left: -$editbutton-size / 2;
+	border-radius: $editbutton-size;
+	line-height: $editbutton-size * 0.9;
+	font-size: $editbutton-fontsize;
+		padding: 0;
+	@media (max-width: $small-screen) {
+		height: $editbutton-size-small;
+		width: $editbutton-size-small;
+		margin-top: -$editbutton-size-small / 2;
+		margin-left: -$editbutton-size-small / 2;
+		border-radius: $editbutton-size-small;
+		line-height: $editbutton-fontsize-small * 1.4 !important;
+		font-size: $editbutton-fontsize-small !important;
+	}
+	
+	background-color: $accent-color;
+	// padding: 5px 10px;
+	// margin-left: -$link-size/2;
 	left: 50%;
 	top: 50%;
 	// color: $primary-color;
@@ -318,10 +329,8 @@ button {
 
 
 .node button {
-	// background: rgba(0,0,0,0.5);
-	padding: 1px;
+	// padding: 1px;
 	max-width: none;
-	// text-shadow: 0 2px 3px black;
 }
 
 .node button:hover{
@@ -353,7 +362,7 @@ button {
 	}
 	.l4 {
 		top: 87%;
-		width: 215%;
+		width: $link-width * 3.55;
 	}
 }
 
@@ -460,20 +469,11 @@ button {
 // 	right: -3px;
 // 	bottom: -11px;
 // }
-.link .edit {
-	// position: absolute;
-	// left: 50%;
-	// margin-left: -$link-size/2;
-	// top: 50%;
-	// margin-top: -$link-size/2;
-	// width: $link-size;
-	// height: $link-size;
-	// padding: 5px 10px;
-	// padding: 0 3px;
-	// line-height: $link-size;
-	// text-align: center;
-	// visibility: visible;
-	// overflow: hidden;
+.link-h.right .edit {
+	margin-left: ($link-size - $editbutton-size) / 2;
+	@media (max-width: $small-screen) {
+		margin-left: ($link-size-small - $editbutton-size-small) / 2;		
+	}
 }
 .link.active .edit {
 	opacity: 0;

@@ -22,7 +22,7 @@
 		height: $link-size-small;
 	}
 	
-	width: $arrow-width;
+	width: $link-width;
 	margin-left: -$link-size;
 	left: 100%;	
 	margin-top: -$link-size / 2;
@@ -37,8 +37,11 @@
 	}
 
 	&.double {
-		left: 120%;
-		width: 26%;
+		margin-left: $link-size;
+		width: $link-width * 0.66;
+		@media (max-width: $small-screen){
+			width: $link-width * 0.4;			
+		}
 	}
 
 	&.left:before,
