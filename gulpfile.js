@@ -106,7 +106,7 @@ var environment = options.environment || 'development';
 		gulp.watch('*.html', ['copy-files']);
 		gulp.watch('img/**/*[jpg,png]', ['optimize-images']);
 		gulp.watch('scss/**/*.scss', ['compile-sass']);
-		gulp.watch('scripts/main.js', ['scripts']);
+		gulp.watch('scripts/NDLAHistoryMindMap.js', ['scripts']);
 	});
 
 
