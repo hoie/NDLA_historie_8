@@ -18,13 +18,14 @@ $small-screen: 1025px;
 
 
 // 5 kolonner, 5 gutters (4 + 2x0,5)
+// 4 kolonner, 4 gutters (3 + 2x0,5)
 
 // $col-width: $node-width + $gutter-width;
 $gutter-proportion: 0.6;
-$col-width: 100% / 5;  // 20%
-$node-width: $col-width * $gutter-proportion; // 20% * 0.6 = 12%
+$col-width: 100% / 4;  // 25%
+$node-width: $col-width * $gutter-proportion; // 25% * 0.6 = 15%
 $node-height: 14%;
-$gutter-width: $col-width - $node-width;  // 20% - 12% = 8%
+$gutter-width: $col-width - $node-width;  // 25% - 15% = 10%
 
 $col-1: $gutter-width / 2;
 $col-2: $col-1 + $col-width;

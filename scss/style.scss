@@ -107,80 +107,81 @@ button {
 .n1 {
 	left: $col-1;
 	top: 11%;
-	height: 80%;
+	height: 36%;
 	
 	.l1 {
-		top: 9%;
+		top: 20%;
 	}
 	.l2 {
-		top: 36%;		    
-	}
-	.l3 {
-		top: 64%;
-	}
-	.l4 {
-		top: 91%;
-		width: $link-width * 3.55;
+		top: 80%;		    
 	}
 }
 
 .n2 {
-	left: $col-2;
-	top: 11%;
+	left: $col-1;
+	top: 52%;
+	height: 20%;
+	
+	.l3 {
+		top: 18%;
+	}
+	.l4 {
+		top: 80%;		    
+	}
 }
 
 .n3 {
-	left: $col-2;
-	top: 33%;
+	left: $col-1;
+	top: 77%;
 }
 
 .n4 {
 	left: $col-2;
-	top: 55%;
+	top: 11%;
+	
+	.l7 {
+		width: 200%;
+	}
+	.l6 {
+		
+	}
 }
 
 .n5 {
-	left: $col-3;
-	top: 11%;
-	height: 80%;
+	left: $col-2;
+	top: 33%;
+	.l7 {
+		left: 85%;
+	}
 }
-.n5 .l7 {
-	left: 85%;
-}
+
 .n6 {
-	left: $col-4;
-	top: 11%;
-	height: 80%;
+	left: $col-2;
+	top: 55%;
+	height: 36%;
 	
 	.l9 {
-		top: 9%;
-	}
-	.l10 {
-		top: 36%;		    
-	}
-	.l11 {
-		top: 64%;
-	}
-	.l12 {
-		top: 91%;
+		top: 20%;
 	}
 
 }
 .n7 {
-	left: $col-5;
-	top: 11%;
+	left: $col-3;
+	top: 33%;
+	height: 36%;
+	
+	.l10 {
+		top: 9%;
+	}
 }
 .n8 {
-	left: $col-5;
-	top: 33%;
+	left: $col-3;
+	top: 77%;
 }
 .n9 {
-	left: $col-5;
-	top: 55%;
-}
-.n10 {
-	left: $col-5;
-	top: 77%;
+	left: $col-4;
+	top: 11%;
+	height: 36%;
 }
 
 
