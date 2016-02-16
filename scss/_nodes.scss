@@ -22,16 +22,20 @@
 	overflow: hidden;
 	cursor: pointer;
 	z-index: 2;
-	filter: drop-shadow(0 4px 2px rgba(0, 0, 0, 0.6));
+	filter: drop-shadow(0 4px 2px rgba(0, 0, 0, 0.5));
+	@media (max-width: $small-screen) {
+		border: 2px solid $link-color;
+		filter: drop-shadow(0 3px 2px rgba(0, 0, 0, 0.3));
+	}
 }
 
 
 .node:before {
 	content: '';
 	position: absolute;
-	background: $tint-color;
+	background: $secondary-color;
 	opacity: 0.3;
-	mix-blend-mode: darken;
+	// mix-blend-mode: darken;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -40,7 +44,7 @@
 }
 
 .node.active:before {
-	background: $tint-color;
+	background: $secondary-color;
 	opacity: 0.8;
 }
 
