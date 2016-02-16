@@ -28,8 +28,20 @@
 	top: 50%;
 
 	&.left {
-		left: -20%;
+		margin-left: $link-size;
+		left: -65%;
+		@media (max-width: $small-screen) {
+			margin-left: $link-size-small;
+		}
 	}
+	&.left .edit {
+		left: 15%;
+		@media (max-width: $small-screen) {
+			// margin-left: $link-size-small;
+			left: 30%;
+		}
+	}
+
 
 	&.double {
 		margin-left: $link-size;
