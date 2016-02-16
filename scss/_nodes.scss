@@ -104,7 +104,8 @@
 	border-radius: $editbutton-size;
 	line-height: $editbutton-size * 0.9;
 	font-size: $editbutton-fontsize;
-		padding: 0;
+	padding: 0;
+	border: 1px solid white;
 	@media (max-width: $small-screen) {
 		height: $editbutton-size-small;
 		width: $editbutton-size-small;
@@ -186,6 +187,12 @@
 	margin-bottom: 1em;
 	margin-top: 1em;
 	text-shadow: 0 3px 6px black;
+	@media (max-width: $small-screen) {
+		font-size: 0.7em;
+		margin-top: 0.5em;
+		letter-spacing: 0;
+		text-shadow: 0 1px 3px black;
+	}
 }
 
 .node.active h2 {
