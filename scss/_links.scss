@@ -96,13 +96,13 @@
 
 .link-v {
 	width: $link-size;
-	height: 35%;
+	height: 53%;
 	margin-left: -$link-size / 2;
 	left: 50%;
-	top: -35%;
+	top: -48%;
 	
 	&.down {
-		top: 100%;
+		top: 95%;
 	}
 
 	&.up:before,
@@ -162,6 +162,7 @@
 	height: 450px;
 	z-index: 999;
 	background: #fff;
+	border: $link-color solid 3px;
 }
 
 .link-h.right .edit {
@@ -185,7 +186,9 @@
 .link.active h2 {
 	opacity: 1;
 	font-size: 20px;
+	padding: 0;
 	text-shadow: none;
+	background-color: rgba(0,0,0,0);
 }
 
 .link h3 {

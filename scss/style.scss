@@ -18,7 +18,7 @@ html {
 
 body {
 	position: relative;
-	background-color: rgba(115,107,0,0.8);
+	background-color: $background-color;
 	height: 100%;
 }
 
@@ -48,7 +48,7 @@ button {
 	cursor: pointer;
 	display: inline-block;
 	overflow: hidden;
-	background-color: $link-color;
+	background-color: $button-color;
 }
 
 #header {
@@ -140,7 +140,7 @@ button {
 	top: 11%;
 	
 	.l7 {
-		width: 200%;
+		width: 232%;
 	}
 	.l6 {
 		
@@ -157,8 +157,8 @@ button {
 
 .n6 {
 	left: $col-2;
-	top: 55%;
-	height: 36%;
+	top: 52%;
+	height: 39%;
 	
 	.l9 {
 		top: 20%;
@@ -168,16 +168,22 @@ button {
 .n7 {
 	left: $col-3;
 	top: 33%;
-	height: 36%;
+	height: 34%;
 	
 	.l10 {
-		top: 9%;
+		top: 20%;
 	}
 }
 .n8 {
 	left: $col-3;
 	top: 77%;
-}
+	}
+
+	.l11 {
+		top: -61% ;
+		height: 67%;
+	}
+
 .n9 {
 	left: $col-4;
 	top: 11%;
