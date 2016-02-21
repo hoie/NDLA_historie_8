@@ -186,6 +186,12 @@
 		margin-left: ($link-size-small - $editbutton-size-small) / 2;		
 	}
 }
+.link-h.right.double .edit {
+	margin-left: ($link-size - $editbutton-size);
+	@media (max-width: $small-screen) {
+		margin-left: ($link-size-small - $editbutton-size-small);		
+	}
+}
 
 .link.active .edit {
 	opacity: 0;
