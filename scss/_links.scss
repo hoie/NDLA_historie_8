@@ -24,7 +24,7 @@
 	}	
 
 	&.left {
-		// margin-left: $link-size;
+		margin-left: $link-size;
 		left: -65%;
 		@media (max-width: $small-screen) {
 			margin-left: $link-size-small;
