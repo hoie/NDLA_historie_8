@@ -12,23 +12,19 @@
 
 .link-h {
 	height: $link-size;
-	@media (max-width: $small-screen) {
-		height: $link-size-small;
-	}
-	
 	width: $link-width;
 	margin-left: -$link-size;
 	left: 100%;	
 	margin-top: -$link-size / 2;
+	top: 50%;
 	@media (max-width: $small-screen) {
 		margin-left: -$link-size-small;
 		height: $link-size-small;
 		margin-top: -$link-size-small / 2;
 	}	
-	top: 50%;
 
 	&.left {
-		margin-left: $link-size;
+		// margin-left: $link-size;
 		left: -65%;
 		@media (max-width: $small-screen) {
 			margin-left: $link-size-small;
@@ -37,7 +33,6 @@
 	&.left .edit {
 		left: 15%;
 		@media (max-width: $small-screen) {
-			// margin-left: $link-size-small;
 			left: 30%;
 		}
 	}
@@ -100,6 +95,11 @@
 	margin-left: -$link-size / 2;
 	left: 50%;
 	top: -48%;
+	@media (max-width: $small-screen) {
+		margin-left: -$link-size-small;
+		width: $link-size-small;
+		margin-left: -$link-size-small / 2;
+	}	
 	
 	&.down {
 		top: 95%;
@@ -116,18 +116,33 @@
 		height: 0;
 		border-left: $link-size solid transparent;
 		border-right: $link-size solid transparent;
+		@media (max-width: $small-screen) {
+			left: -$link-size-small / 2;
+			border-left: $link-size-small solid transparent;
+			border-right: $link-size-small solid transparent;
+		}
+
 	}
 
 	&.up:before,
 	&.double:before {
 		top: -$link-size / 2;
 		border-bottom: $link-size solid $link-color;
+		@media (max-width: $small-screen) {
+			top: -$link-size-small;
+			border-bottom: $link-size-small solid $link-color;
+		}
+
 	}
 
 	&.down:after,
 	&.double:after {
 		bottom: -$link-size / 2;
 		border-top: $link-size solid $link-color;
+		@media (max-width: $small-screen) {
+			bottom: -$link-size-small;
+			border-top: $link-size-small solid $link-color;
+		}		
 	}
 }
 
