@@ -107,88 +107,95 @@ button {
 
 .n1 {
 	left: $col-1;
-	top: 11%;
-	height: 36%;
+	top: $top;
 	
 	.l1 {
-		top: 20%;
-	}
-	.l2 {
-		top: 80%;		    
 	}
 }
 
 .n2 {
 	left: $col-1;
-	top: 52%;
-	height: 20%;
+	top: $top + $col-height;
 	
-	.l3 {
-		top: 18%;
+	.l2 {
 	}
-	.l4 {
-		top: 80%;		    
+	.l3 {
+		height: 203%;
 	}
 }
 
 .n3 {
 	left: $col-1;
-	top: 77%;
+	top: $top + $col-height * 3;
+	
+	.l4 {
+	}
 }
 
 .n4 {
 	left: $col-2;
-	top: 11%;
+	top: $top;
+	height: $node-height + $col-height * 2;
 	
-	.l7 {
-		width: 232%;
+	.l5 {
+		top: 12%;
 	}
 	.l6 {
-		
+	}
+	.l7 {
+		top: 88%;
+	}
+	.l8 {
+		height: 12%;
+		top: 99%;
 	}
 }
 
 .n5 {
 	left: $col-2;
-	top: 33%;
-	.l7 {
-		left: 85%;
-	}
-}
-
-.n6 {
-	left: $col-2;
-	top: 52%;
-	height: 39%;
+	top: $top + $col-height * 3;
 	
 	.l9 {
 		top: 20%;
 	}
-
+	.l10 {
+		top: 80%;
+		width: 232%;
+	}
 }
+
+.n6 {
+	left: $col-3;
+	top: $top;
+}
+
 .n7 {
 	left: $col-3;
-	top: 33%;
-	height: 34%;
+	top: $top + $col-height;
 	
-	.l10 {
-		top: 20%;
+	.l11 {
+	}
+	.l12 {
 	}
 }
+
 .n8 {
 	left: $col-3;
-	top: 77%;
-	}
+	top: $top + $col-height * 2;
+	height: $node-height * 2;
 
-	.l11 {
-		top: -61% ;
-		height: 67%;
+	.l13 {
+		height: 24%;
+		top: -24%;
 	}
+	.l14 {
+	}
+}
 
 .n9 {
 	left: $col-4;
-	top: 11%;
-	height: 36%;
+	top: $top;
+	height: $node-height + $col-height * 3;
 }
 
 
