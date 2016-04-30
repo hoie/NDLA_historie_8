@@ -34,7 +34,11 @@ h2 {
 	line-height: 1;
 	text-transform: uppercase;
 	letter-spacing: 2px;
-	hyphens: auto;
+	
+	overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    
 	margin-bottom: 1em;
 	margin-top: 0;
 	transition: all .5s ease-in-out;
@@ -217,7 +221,7 @@ button {
 	right: 0;
 	height: 10px;
 	border-radius: 10px 0 0 10px;
-	background: $primary-color;
+	background: $button-color;
 	width: 75px;
 }
 .progress_number {
@@ -226,7 +230,7 @@ button {
 	height: 30px;
 	padding: 5px 10px 10px;
 	right: -30px;
-	color: #222;
+	color: $button-color;
 }
 .settings {
 	position: fixed;
