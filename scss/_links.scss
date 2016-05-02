@@ -201,7 +201,9 @@
 
 .link h2 {
 	opacity: 0;
-	transition: opacity .3s ease;
+	transition: opacity 1s ease;
+	font-size: 4px;
+	background-color: rgba(0,0,0,0);
 }
 
 .link.active h2 {
